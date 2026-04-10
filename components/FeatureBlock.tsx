@@ -42,13 +42,13 @@ export function FeatureBlock({
       </div>
 
       <div className={phoneFirst ? "md:order-2" : "md:order-1"}>
-        <p className="text-sm font-semibold text-mint-deep tracking-wide mb-4">
+        <p className="text-sm font-bold text-mint-600 tracking-wide mb-4">
           {eyebrow}
         </p>
-        <h3 className="text-3xl md:text-[2.75rem] font-bold text-ink mb-6 leading-tight">
+        <h3 className="text-3xl md:text-[2.75rem] font-bold text-ink-900 mb-6 leading-tight">
           {title}
         </h3>
-        <p className="text-lg text-ink/45 leading-relaxed max-w-lg">
+        <p className="text-lg text-ink-700 font-medium leading-relaxed max-w-lg">
           {body}
         </p>
       </div>

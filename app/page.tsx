@@ -51,7 +51,7 @@ function Navigation() {
       <div className="mx-auto max-w-7xl px-6 pt-4">
         <div className="flex items-center justify-between bg-white/70 backdrop-blur-2xl border border-white/50 rounded-2xl px-6 py-3 shadow-[0_2px_20px_-4px_rgba(0,0,0,0.06)]">
           <a href="/" className="flex items-center gap-2.5">
-            <Image src="/app-icon-hd.png" alt="AiQo" width={72} height={72} className="rounded-[18px]" />
+            <Image src="/app-icon-hd.png" alt="AiQo" width={96} height={96} className="rounded-[22px]" />
             <span className="text-xl font-bold text-ink-900 tracking-tight">AiQo</span>
           </a>
           <div className="hidden md:flex items-center gap-1">
@@ -131,7 +131,7 @@ function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="text-lg md:text-xl text-ink-500 max-w-xl leading-relaxed mt-6"
+              className="text-lg md:text-xl text-ink-700 font-medium max-w-xl leading-relaxed mt-6"
             >
               كابتن حمودي يقرأ يومك، يتذكر رحلتك، ويكون معاك بكل خطوة.
             </motion.p>
@@ -195,7 +195,7 @@ function TrustStrip() {
   return (
     <section className="py-8 border-y border-ink-300/20">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="text-center text-sm text-ink-500 font-medium">
+        <p className="text-center text-sm text-ink-700 font-semibold">
           صُمم في الإمارات &bull; متكامل مع Apple Health &bull; خصوصيتك مقدّسة
         </p>
       </div>
@@ -216,9 +216,9 @@ function CaptainHamoudi() {
             هذا كابتن حمودي.
           </h2>
           <div className="space-y-4 max-w-lg">
-            <p className="text-lg text-ink-700 leading-relaxed">ما هو مساعد ذكي. هو شخصية.</p>
-            <p className="text-lg text-ink-700 leading-relaxed">يحچي بلهجتك، يفهم مزاجك، ويتذكر التفاصيل اللي تشاركها وياه.</p>
-            <p className="text-lg text-ink-700 leading-relaxed">أول مرة بحياتك، عندك مدرب عربي يفهمك بدون ما تترجم.</p>
+            <p className="text-lg text-ink-700 font-medium leading-relaxed">ما هو مساعد ذكي. هو شخصية.</p>
+            <p className="text-lg text-ink-700 font-medium leading-relaxed">يحچي بلهجتك، يفهم مزاجك، ويتذكر التفاصيل اللي تشاركها وياه.</p>
+            <p className="text-lg text-ink-700 font-medium leading-relaxed">أول مرة بحياتك، عندك مدرب عربي يفهمك بدون ما تترجم.</p>
           </div>
         </FadeIn>
 
@@ -257,7 +257,7 @@ function HistorySection() {
             <br />
             <span className="bg-gradient-to-l from-sand-500 to-sand-300 bg-clip-text text-transparent">إنت جاي ويا تاريخ .</span>
           </h2>
-          <p className="text-lg text-ink-500 max-w-2xl mx-auto mt-6">
+          <p className="text-lg text-ink-700 font-medium max-w-2xl mx-auto mt-6">
             AiQo يقرأ تاريخك الصحي الكامل من Apple Health ويحدد مستواك من أول لحظة.
           </p>
         </FadeIn>
@@ -313,7 +313,7 @@ function ProofSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-ink-900 mt-4">
             تقدم تشوفه، مو تسمع عنه.
           </h2>
-          <p className="text-lg text-ink-500 max-w-2xl mx-auto mt-4">
+          <p className="text-lg text-ink-700 font-medium max-w-2xl mx-auto mt-4">
             AiQo مبني على مبدأ واحد: نتيجة حقيقية، أو لا شي.
           </p>
         </FadeIn>
@@ -322,9 +322,9 @@ function ProofSection() {
             <FadeIn key={card.title} delay={i * 0.1}>
               <div className="bg-white/60 backdrop-blur-xl border border-white/40 rounded-3xl p-8 text-center hover:scale-105 transition-transform duration-500">
                 <p className={`text-7xl font-bold ${card.color}`}>{card.number}</p>
-                <p className="text-sm text-ink-500 mt-2">{card.label}</p>
+                <p className="text-sm text-ink-700 font-semibold mt-2">{card.label}</p>
                 <p className="text-lg font-bold text-ink-900 mt-4">{card.title}</p>
-                <p className="text-sm text-ink-500 mt-2">{card.subtitle}</p>
+                <p className="text-sm text-ink-700 font-medium mt-2">{card.subtitle}</p>
               </div>
             </FadeIn>
           ))}
@@ -344,7 +344,7 @@ function ShowcaseSection() {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-ink-900 mb-5">
             AiQo بعينك.
           </h2>
-          <p className="text-ink-500 text-lg max-w-lg mx-auto leading-relaxed">
+          <p className="text-ink-700 font-medium text-lg max-w-lg mx-auto leading-relaxed">
             كل شاشة صُممت بعناية. كل تفاصيل مدروسة. هذا اللي راح تشوفه أول يوم تفتح التطبيق.
           </p>
         </FadeIn>
@@ -474,7 +474,7 @@ function PrivacySection() {
           <h2 className="text-4xl md:text-5xl font-bold text-ink-900 mb-4">
             بياناتك. ملكك.
           </h2>
-          <p className="text-ink-500 text-lg max-w-2xl mx-auto">صحتك مو سلعة. هذا التزامنا، مو شعار.</p>
+          <p className="text-ink-700 font-medium text-lg max-w-2xl mx-auto">صحتك مو سلعة. هذا التزامنا، مو شعار.</p>
         </FadeIn>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {privacyPillars.map((pillar, i) => (
@@ -484,7 +484,7 @@ function PrivacySection() {
                   <pillar.icon className="w-8 h-8 text-mint-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-ink-900 mb-3">{pillar.title}</h3>
-                <p className="text-ink-500 text-sm leading-relaxed">{pillar.description}</p>
+                <p className="text-ink-700 text-sm font-medium leading-relaxed">{pillar.description}</p>
               </div>
             </FadeIn>
           ))}
@@ -535,7 +535,7 @@ function PricingSection() {
         <FadeIn className="text-center mb-20">
           <p className="text-mint-600 text-sm font-semibold mb-3 tracking-wide">الأسعار</p>
           <h2 className="text-3xl md:text-5xl font-bold text-ink-900 mb-5">خطة لكل هدف.</h2>
-          <p className="text-ink-500 text-lg">7 أيام تجربة مجانية &bull; بدون التزام &bull; إلغاء بأي وقت</p>
+          <p className="text-ink-700 font-medium text-lg">7 أيام تجربة مجانية &bull; بدون التزام &bull; إلغاء بأي وقت</p>
         </FadeIn>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start max-w-3xl mx-auto">
           {plans.map((plan, i) => (
@@ -586,7 +586,7 @@ function PricingSection() {
             </FadeIn>
           ))}
         </div>
-        <p className="text-center text-ink-500 text-sm mt-10">
+        <p className="text-center text-ink-700 font-medium text-sm mt-10">
           7 أيام مجانية بالكامل &bull; لا تحتاج بطاقة ائتمان &bull; إلغاء بأي وقت
         </p>
       </div>
@@ -637,7 +637,7 @@ function FAQSection() {
                 <AccordionTrigger className="text-base font-medium text-ink-900 hover:no-underline py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-ink-500 text-sm pb-5 leading-relaxed">
+                <AccordionContent className="text-ink-700 text-sm font-medium pb-5 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -658,7 +658,7 @@ function FinalCTA() {
           <h2 className="text-5xl md:text-6xl font-bold text-ink-900 leading-tight">
             جاهز تتعرف على كابتن حمودي؟
           </h2>
-          <p className="text-lg text-ink-500 mt-4">
+          <p className="text-lg text-ink-700 font-medium mt-4">
             7 أيام مجانية. بدون بطاقة. بدون التزام.
           </p>
           {/* TODO: Replace with real App Store link before launch */}
@@ -685,7 +685,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start mb-12">
           {/* Right column (RTL start) — brand */}
           <div className="flex items-start gap-3">
-            <Image src="/app-icon-hd.png" alt="AiQo" width={80} height={80} className="rounded-[20px]" />
+            <Image src="/app-icon-hd.png" alt="AiQo" width={96} height={96} className="rounded-[22px]" />
             <div>
               <span className="text-lg font-bold text-ink-900 block">AiQo</span>
               <p className="text-sm text-ink-500 mt-1 leading-relaxed">ليس تطبيق فقط ، بل بُعد جديد للصحة .</p>

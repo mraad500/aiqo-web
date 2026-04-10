@@ -146,6 +146,7 @@
   body {
     @apply bg-cream-50 text-ink-900;
     font-family: var(--font-arabic), "Readex Pro", sans-serif;
+    font-weight: 500;
   }
   html {
     @apply font-sans;
