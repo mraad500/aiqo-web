@@ -5,16 +5,45 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Brand Colors — exact match to app screens */
+  /* ── Mint scale (primary brand) ── */
+  --color-mint-50:  #F0FAF5;
+  --color-mint-100: #E2F5EC;
+  --color-mint-200: #C4F0DB;
+  --color-mint-300: #9DE5C5;
+  --color-mint-400: #7DD9B0;
+  --color-mint-500: #5ECDB7;
+  --color-mint-600: #3DB597;
+  --color-mint-700: #2A8B73;
+
+  /* ── Sand scale (warm accent) ── */
+  --color-sand-50:  #FDF8EE;
+  --color-sand-100: #FBF0DC;
+  --color-sand-200: #F8D6A3;
+  --color-sand-300: #F2C781;
+  --color-sand-400: #EBCF97;
+  --color-sand-500: #D9B26A;
+  --color-sand-600: #B89968;
+
+  /* ── Ink scale (text) ── */
+  --color-ink-900: #0F1721;
+  --color-ink-700: #2A3440;
+  --color-ink-500: #5F6F80;
+  --color-ink-400: #8A99AB;
+  --color-ink-300: #B8C2CC;
+
+  /* ── Backgrounds ── */
+  --color-cream-50:  #FAFAF7;
+  --color-cream-100: #F5F5F0;
+
+  /* ── Legacy aliases (backward compat) ── */
   --color-mint: #D5EDDC;
-  --color-mint-deep: #6ECFA2;
-  --color-mint-50: #EDF7F0;
-  --color-mint-card: #E0F3E5;
+  --color-mint-deep: #5ECDB7;
+  --color-mint-card: #E2F5EC;
   --color-sand: #EDD9B3;
   --color-sand-card: #F5E8CC;
   --color-sand-10: rgba(237, 217, 179, 0.12);
-  --color-ink: #0A0A0A;
-  --color-bg: #FEFDFB;
+  --color-ink: #0F1721;
+  --color-bg: #FAFAF7;
   --color-card-surface: rgba(255, 255, 255, 0.75);
 
   /* Typography */
@@ -76,38 +105,38 @@
 }
 
 :root {
-  --background: #FEFDFB;
-  --foreground: #0A0A0A;
+  --background: #FAFAF7;
+  --foreground: #0F1721;
   --card: rgba(255, 255, 255, 0.6);
-  --card-foreground: #0A0A0A;
+  --card-foreground: #0F1721;
   --popover: #FAFAF7;
-  --popover-foreground: #0A0A0A;
-  --primary: #0A0A0A;
+  --popover-foreground: #0F1721;
+  --primary: #0F1721;
   --primary-foreground: #FAFAF7;
   --secondary: #f5f5f0;
-  --secondary-foreground: #0A0A0A;
+  --secondary-foreground: #0F1721;
   --muted: #f5f5f0;
-  --muted-foreground: #6b6b6b;
-  --accent: #D5EDDC;
-  --accent-foreground: #0A0A0A;
+  --muted-foreground: #5F6F80;
+  --accent: #C4F0DB;
+  --accent-foreground: #0F1721;
   --destructive: oklch(0.577 0.245 27.325);
   --border: rgba(0, 0, 0, 0.06);
   --input: rgba(0, 0, 0, 0.06);
-  --ring: #6ECFA2;
-  --chart-1: #D5EDDC;
-  --chart-2: #6ECFA2;
+  --ring: #5ECDB7;
+  --chart-1: #C4F0DB;
+  --chart-2: #5ECDB7;
   --chart-3: #EDD9B3;
-  --chart-4: #0A0A0A;
-  --chart-5: #6b6b6b;
+  --chart-4: #0F1721;
+  --chart-5: #5F6F80;
   --radius: 0.625rem;
-  --sidebar: #FEFDFB;
-  --sidebar-foreground: #0A0A0A;
-  --sidebar-primary: #0A0A0A;
+  --sidebar: #FAFAF7;
+  --sidebar-foreground: #0F1721;
+  --sidebar-primary: #0F1721;
   --sidebar-primary-foreground: #FAFAF7;
   --sidebar-accent: #f5f5f0;
-  --sidebar-accent-foreground: #0A0A0A;
+  --sidebar-accent-foreground: #0F1721;
   --sidebar-border: rgba(0, 0, 0, 0.06);
-  --sidebar-ring: #6ECFA2;
+  --sidebar-ring: #5ECDB7;
 }
 
 @layer base {
@@ -115,7 +144,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-bg text-ink;
+    @apply bg-cream-50 text-ink-900;
     font-family: var(--font-arabic), "IBM Plex Sans Arabic", sans-serif;
   }
   html {
