@@ -25,6 +25,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import { PhoneGallery } from "@/components/PhoneGallery";
+import { FeatureBlock } from "@/components/FeatureBlock";
 
 /* ─── Fade-in wrapper ─── */
 function FadeIn({
@@ -162,7 +164,7 @@ function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Phone mockup with real screenshot */}
+        {/* Hero phone — auto-rotating real screenshots */}
         <motion.div
           style={{ y: phoneY }}
           className="flex justify-center order-1 lg:order-2"
@@ -170,41 +172,13 @@ function HeroSection() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative"
           >
-            {/* Ambient glow */}
-            <div className="absolute -inset-12 bg-gradient-to-b from-mint/20 via-mint/10 to-sand/10 blur-3xl rounded-full opacity-80" />
-
-            {/* iPhone shell */}
-            <div className="relative w-[280px] h-[580px] rounded-[52px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] p-[3px] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.35),_0_0_0_1px_rgba(255,255,255,0.05)_inset]">
-              {/* Inner bezel highlight */}
-              <div className="absolute inset-[1px] rounded-[51px] bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none z-20" />
-
-              {/* Screen area */}
-              <div className="relative w-full h-full rounded-[49px] overflow-hidden bg-white">
-                {/* Dynamic Island */}
-                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[90px] h-[26px] bg-black rounded-full z-10 shadow-[0_0_0_1px_rgba(0,0,0,0.1)]" />
-
-                {/* Screenshot */}
-                <Image
-                  src="/app-screenshot.png"
-                  alt="شاشة AiQo الرئيسية"
-                  fill
-                  className="object-cover object-center"
-                  sizes="280px"
-                  priority
-                />
-
-                {/* Screen glass reflection */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-transparent pointer-events-none z-10" />
-              </div>
-            </div>
-
-            {/* Side button (power) */}
-            <div className="absolute -left-[1.5px] top-[140px] w-[3px] h-[60px] bg-[#2a2a2a] rounded-l-sm" />
-            {/* Volume buttons */}
-            <div className="absolute -right-[1.5px] top-[100px] w-[3px] h-[30px] bg-[#2a2a2a] rounded-r-sm" />
-            <div className="absolute -right-[1.5px] top-[140px] w-[3px] h-[30px] bg-[#2a2a2a] rounded-r-sm" />
+            <PhoneGallery
+              images={["/screens/captain-chat.webp", "/screens/home.webp"]}
+              alt="AiQo"
+              priority
+              interval={5000}
+            />
           </motion.div>
         </motion.div>
       </div>
@@ -216,7 +190,7 @@ function HeroSection() {
 function TrustStrip() {
   const items = [
     "مصمم في الإمارات",
-    "مبني بـ Apple HealthKit",
+    "مبني بـ Apple Health",
     "خصوصيتك أولاً",
   ];
   return (
@@ -257,7 +231,7 @@ const features = [
   },
   {
     icon: Users,
-    title: "قبيلتك (إمارة)",
+    title: "التحديات اليومية",
     description: "تنافس مع أصدقائك في تحديات أسبوعية",
     tone: "mint" as const,
   },
@@ -270,7 +244,7 @@ const features = [
   {
     icon: Music,
     title: "My Vibe",
-    description: "موسيقى Spotify تتفاعل مع نبضك",
+    description: "موسيقى تتفاعل مع نبضك",
     tone: "mint" as const,
   },
 ];
@@ -322,7 +296,6 @@ function FeaturesGrid() {
 function CaptainHamoudi() {
   return (
     <section id="captain" className="relative py-28 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-bl from-sand-10 via-transparent to-mint-50/30" />
 
       <div className="relative mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -334,7 +307,7 @@ function CaptainHamoudi() {
             <span className="bg-gradient-to-l from-sand to-sand-card bg-clip-text text-transparent">كابتن حمودي</span>
           </h2>
           <p className="text-lg text-ink/50 leading-relaxed max-w-lg">
-            مدربك الشخصي اللي يحچي عراقي، يفهم مزاجك، ويتذكر رحلتك. مبني بذكاء اصطناعي هجين — على جهازك أولاً، وفي السحابة عند الحاجة.
+            مدربك الشخصي بلهجة دافئة، يفهم مزاجك، ويتذكر رحلتك. مبني بذكاء اصطناعي هجين — على جهازك أولاً، وفي السحابة عند الحاجة.
           </p>
           {/* Audio player */}
           <div className="group bg-white/70 backdrop-blur-xl border border-white/50 rounded-2xl p-4 inline-flex items-center gap-4 max-w-sm shadow-[0_4px_20px_-6px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.1)] transition-shadow cursor-pointer">
@@ -350,18 +323,18 @@ function CaptainHamoudi() {
 
         <FadeIn delay={0.2} className="flex justify-center">
           <div className="relative">
-            <div className="absolute -inset-12 bg-gradient-to-t from-mint/20 to-sand/10 blur-3xl rounded-full" />
+            <div className="absolute -inset-8 bg-mint/25 blur-3xl rounded-full scale-110" />
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="relative"
             >
               <Image
-                src="/captain-hamoudi.png"
+                src="/screens/captain-portrait.webp"
                 alt="كابتن حمودي"
-                width={340}
-                height={500}
-                className="relative drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
+                width={360}
+                height={360}
+                className="relative rounded-full ring-8 ring-white/80 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)]"
                 priority
               />
             </motion.div>
@@ -372,12 +345,116 @@ function CaptainHamoudi() {
   );
 }
 
+/* ───────────────────────────── Showcase ───────────────────────────── */
+function ShowcaseSection() {
+  return (
+    <section id="showcase" className="py-32 md:py-48 bg-gradient-to-b from-white via-bg to-white">
+      <div className="mx-auto max-w-7xl px-6">
+        <FadeIn className="text-center mb-20 md:mb-32">
+          <p className="text-mint-deep text-sm font-semibold mb-3 tracking-wide">شوف التطبيق</p>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-ink mb-5">
+            AiQo بعينك.
+          </h2>
+          <p className="text-ink/40 text-lg max-w-lg mx-auto leading-relaxed">
+            كل شاشة صُممت بعناية. كل تفاصيل مدروسة. هذا اللي راح تشوفه أول يوم تفتح التطبيق.
+          </p>
+        </FadeIn>
+
+        <div className="space-y-8 md:space-y-0">
+          <FeatureBlock
+            alignment="phone-end"
+            eyebrow="الرئيسية"
+            title="يومك بنظرة واحدة."
+            body="كل اللي يهمك بصحتك — خطواتك، نومك، طاقتك — مرتب بهدوء بمكان واحد. بدون فوضى أرقام."
+            images={["/screens/home.webp"]}
+            priority
+          />
+
+          <FeatureBlock
+            alignment="phone-start"
+            eyebrow="النوم"
+            title="نوم أعمق. صحوة أذكى."
+            body="AiQo يحلل نومك بكل تفاصيله، ويوقظك باللحظة الصح اللي جسمك جاهز فيها. ما تصحى متعب بعد اليوم."
+            images={[
+              "/screens/sleep-1.webp",
+              "/screens/sleep-2.webp",
+              "/screens/sleep-3.webp",
+              "/screens/sleep-4.webp",
+              "/screens/sleep-5.webp",
+            ]}
+          />
+
+          <FeatureBlock
+            alignment="phone-end"
+            eyebrow="المطبخ"
+            title="كل وجبة تخدم هدفك."
+            body="صوّر ثلاجتك، وخل AiQo يبني لك خطة وجبات بثواني — من المكونات اللي عندك، مصممة لجسمك."
+            images={[
+              "/screens/kitchen-1.webp",
+              "/screens/kitchen-2.webp",
+              "/screens/kitchen-3.webp",
+              "/screens/kitchen-4.webp",
+            ]}
+          />
+
+          <FeatureBlock
+            alignment="phone-start"
+            eyebrow="التحديات الأسطورية"
+            title="مشاريع 16 أسبوع تغيّرك."
+            body="ما هي تحديات يومية. هاي رحلات طويلة، مدروسة، توصلك لمستوى ما تخيلته. كل أسبوع خطوة. كل خطوة قريبك من النسخة الأقوى منك."
+            images={[
+              "/screens/legendary-1.webp",
+              "/screens/legendary-2.webp",
+              "/screens/legendary-3.webp",
+              "/screens/legendary-4.webp",
+              "/screens/legendary-5.webp",
+              "/screens/legendary-6.webp",
+              "/screens/legendary-7.webp",
+              "/screens/legendary-8.webp",
+              "/screens/legendary-9.webp",
+              "/screens/legendary-10.webp",
+            ]}
+            interval={4000}
+          />
+
+          <FeatureBlock
+            alignment="phone-end"
+            eyebrow="التحديات اليومية"
+            title="تقدّم يومي. مكافآت حقيقية."
+            body="كل يوم مهام صغيرة تخليك تتحرك. تنجزها، تكسب نقاط، وترتفع بمستواك خطوة خطوة."
+            images={[
+              "/screens/daily-quest-1.webp",
+              "/screens/daily-quest-2.webp",
+            ]}
+          />
+
+          <FeatureBlock
+            alignment="phone-start"
+            eyebrow="التمارين"
+            title="كل تمرين، مفصّل لك."
+            body="خطط تمرين تتكيف مع مستواك، تتطور معاك، ومعاك كابتن يدربك صوتياً وأنت تتمرن."
+            images={["/screens/workout.webp"]}
+          />
+
+          <FeatureBlock
+            alignment="phone-end"
+            eyebrow="My Vibe"
+            title="موسيقى تتناغم مع نبضك."
+            body="جسمك يشتغل، والموسيقى تتغير معاه. AiQo يختار اللي يناسب طاقتك بكل لحظة."
+            images={["/screens/vibe.webp"]}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ───────────────────────────── Privacy ───────────────────────────── */
 const privacyPillars = [
   {
     icon: Smartphone,
     title: "معالجة على جهازك",
-    description: "Apple Intelligence يشتغل محلياً على جهازك بدون ما يطلع منه شي",
+    description: "الذكاء الاصطناعي يشتغل محلياً على جهازك بدون ما يطلع منه شي",
   },
   {
     icon: Database,
@@ -386,7 +463,7 @@ const privacyPillars = [
   },
   {
     icon: Shield,
-    title: "HealthKit آمن",
+    title: "خصوصية مطلقة",
     description: "نتبع كل قواعد Apple الصارمة لحماية بياناتك الصحية",
   },
 ];
@@ -428,32 +505,25 @@ const plans = [
     name: "AiQo Core",
     price: "$9.99",
     period: "/شهر",
-    features: ["المميزات الأساسية", "كابتن حمودي", "تتبع النوم والنشاط"],
+    features: [
+      "كابتن حمودي الأساسي",
+      "Gym و Kitchen كاملين",
+      "تتبع النوم والنشاط",
+      "تحديات يومية",
+    ],
     popular: false,
   },
   {
-    name: "AiQo Pro",
+    name: "AiQo Intelligence Pro",
     price: "$19.99",
     period: "/شهر",
     features: [
       "كل ميزات Core",
-      "Peaks و HRR",
-      "خطط أسبوعية مخصصة",
-      "تحديات متقدمة",
-    ],
-    popular: true,
-  },
-  {
-    name: "AiQo Intelligence",
-    price: "$39.99",
-    period: "/شهر",
-    features: [
-      "كل ميزات Pro",
+      "التحديات الأسطورية كاملة",
       "ذاكرة كابتن موسعة",
       "نموذج ذكاء اصطناعي أقوى",
-      "أولوية الدعم",
     ],
-    popular: false,
+    popular: true,
   },
 ];
 
@@ -466,7 +536,7 @@ function PricingSection() {
           <h2 className="text-3xl md:text-5xl font-bold text-ink mb-5">خطة لكل هدف</h2>
           <p className="text-ink/40 text-lg">تجربة مجانية أسبوع كامل &bull; بدون التزام</p>
         </FadeIn>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start max-w-3xl mx-auto">
           {plans.map((plan, i) => (
             <FadeIn key={plan.name} delay={i * 0.1}>
               <div
@@ -520,7 +590,7 @@ function PricingSection() {
 const faqs = [
   {
     question: "متى يطلق التطبيق؟",
-    answer: "قريباً جداً، 2026. سجّل الآن وراح نرسلك إشعار أول ما ينزل.",
+    answer: "قريباً جداً. سجّل الآن وراح نرسلك إشعار أول ما ينزل.",
   },
   {
     question: "هل يعمل بدون إنترنت؟",
@@ -532,11 +602,11 @@ const faqs = [
   },
   {
     question: "كيف أحمي بياناتي الصحية؟",
-    answer: "نتبع معايير Apple HealthKit بالكامل. بياناتك تبقى على جهازك ولا نرسل شي خام للسحابة.",
+    answer: "نتبع أعلى معايير Apple لحماية البيانات الصحية. بياناتك تبقى على جهازك ولا نرسل شي خام للسحابة.",
   },
   {
     question: "هل يدعم لهجات عربية أخرى؟",
-    answer: "كابتن حمودي يحچي عراقي، والواجهة بالعربي الفصيح. ندرس إضافة لهجات أخرى مستقبلاً.",
+    answer: "كابتن حمودي يحچي بلهجته الدافئة، والواجهة بالعربي الفصيح. ندرس إضافة لهجات أخرى مستقبلاً.",
   },
 ];
 
@@ -578,10 +648,8 @@ function FinalCTA() {
       <div className="mx-auto max-w-4xl px-6">
         <FadeIn>
           <div className="relative bg-ink rounded-[32px] px-8 py-20 md:px-16 text-center overflow-hidden">
-            {/* Decorative gradient */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-mint-deep/10 to-transparent" />
             <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-t from-sand/10 to-transparent" />
-
             <div className="relative">
               <Image src="/app-icon.png" alt="AiQo" width={56} height={56} className="rounded-2xl mx-auto mb-8 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.3)]" />
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
@@ -620,13 +688,11 @@ function Footer() {
               <p className="text-sm text-ink/35 mt-1 leading-relaxed">أول نظام صحي ذكي بالعربي.<br />مصمم في الإمارات.</p>
             </div>
           </div>
-
           <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink/40 md:justify-center">
             <a href="/privacy" className="hover:text-ink transition-colors">Privacy Policy</a>
             <a href="/terms" className="hover:text-ink transition-colors">Terms</a>
             <a href="/support" className="hover:text-ink transition-colors">Support</a>
           </div>
-
           <div className="flex gap-6 text-sm text-ink/40 md:justify-end">
             <a href="#" className="hover:text-ink transition-colors" aria-label="Instagram">Instagram</a>
             <a href="#" className="hover:text-ink transition-colors" aria-label="X">X</a>
@@ -651,6 +717,7 @@ export default function Home() {
         <TrustStrip />
         <FeaturesGrid />
         <CaptainHamoudi />
+        <ShowcaseSection />
         <PrivacySection />
         <PricingSection />
         <FAQSection />
