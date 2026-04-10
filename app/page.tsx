@@ -125,7 +125,7 @@ function HeroSection() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-5xl md:text-7xl font-bold text-ink-900 leading-tight tracking-tight"
             >
-              صحتك. تحچي عربي.
+              ليس تطبيق فقط ، بل بُعد جديد للصحة .
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -239,6 +239,39 @@ function CaptainHamoudi() {
                 priority
               />
             </motion.div>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────────── History (You're not starting from zero) ───────────────────────────── */
+function HistorySection() {
+  return (
+    <section className="py-24 md:py-32 bg-gradient-to-b from-cream-50 to-white">
+      <div className="mx-auto max-w-7xl px-6">
+        <FadeIn className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-ink-900 leading-tight">
+            إنت مو شخص يبدأ من صفر ،
+            <br />
+            <span className="bg-gradient-to-l from-sand-500 to-sand-300 bg-clip-text text-transparent">إنت جاي ويا تاريخ .</span>
+          </h2>
+          <p className="text-lg text-ink-500 max-w-2xl mx-auto mt-6">
+            AiQo يقرأ تاريخك الصحي الكامل من Apple Health ويحدد مستواك من أول لحظة.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.15}>
+          <div className="flex justify-center">
+            <PhoneGallery
+              images={[
+                "/screens/history-1.webp",
+                "/screens/history-2.webp",
+              ]}
+              alt="إنت مو شخص يبدأ من صفر"
+              interval={4000}
+            />
           </div>
         </FadeIn>
       </div>
@@ -655,7 +688,7 @@ function Footer() {
             <Image src="/app-icon-hd.png" alt="AiQo" width={48} height={48} className="rounded-xl" />
             <div>
               <span className="text-lg font-bold text-ink-900 block">AiQo</span>
-              <p className="text-sm text-ink-500 mt-1 leading-relaxed">صحتك تحچي عربي.</p>
+              <p className="text-sm text-ink-500 mt-1 leading-relaxed">ليس تطبيق فقط ، بل بُعد جديد للصحة .</p>
               <p className="text-xs text-ink-400 mt-1">&copy; 2026 AiQo</p>
             </div>
           </div>
@@ -703,6 +736,7 @@ export default function Home() {
         <HeroSection />
         <TrustStrip />
         <CaptainHamoudi />
+        <HistorySection />
         <ProofSection />
         <ShowcaseSection />
         <PrivacySection />
