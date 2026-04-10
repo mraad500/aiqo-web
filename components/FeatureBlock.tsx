@@ -25,23 +25,29 @@ export function FeatureBlock({
   const phoneFirst = alignment === "phone-start";
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="grid md:grid-cols-2 gap-12 md:gap-20 items-center py-16 md:py-28"
-    >
-      <div className={phoneFirst ? "md:order-1" : "md:order-2"}>
+    <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center py-16 md:py-28">
+      <motion.div
+        initial={{ opacity: 0, x: phoneFirst ? -30 : 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        className={phoneFirst ? "md:order-1" : "md:order-2"}
+      >
         <PhoneGallery
           images={images}
           alt={title}
           interval={interval}
           priority={priority}
         />
-      </div>
+      </motion.div>
 
-      <div className={phoneFirst ? "md:order-2" : "md:order-1"}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+        className={phoneFirst ? "md:order-2" : "md:order-1"}
+      >
         <p className="text-sm font-bold text-mint-600 tracking-wide mb-4">
           {eyebrow}
         </p>
@@ -51,7 +57,7 @@ export function FeatureBlock({
         <p className="text-lg text-ink-700 font-medium leading-relaxed max-w-lg">
           {body}
         </p>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

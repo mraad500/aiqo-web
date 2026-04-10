@@ -33,10 +33,10 @@ function FadeIn({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] }}
       className={className}
     >
       {children}
@@ -51,7 +51,7 @@ function Navigation() {
       <div className="mx-auto max-w-7xl px-6 pt-4">
         <div className="flex items-center justify-between bg-white/70 backdrop-blur-2xl border border-white/50 rounded-2xl px-6 py-3 shadow-[0_2px_20px_-4px_rgba(0,0,0,0.06)]">
           <a href="/" className="flex items-center gap-2.5">
-            <Image src="/app-icon-hd.png" alt="AiQo" width={96} height={96} className="rounded-[22px]" />
+            <Image src="/app-icon-hd.png" alt="AiQo" width={96} height={96} quality={100} className="rounded-[22px]" />
             <span className="text-xl font-bold text-ink-900 tracking-tight">AiQo</span>
           </a>
           <div className="hidden md:flex items-center gap-1">
@@ -100,7 +100,7 @@ function HeroSection() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const phoneY = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const phoneY = useTransform(scrollYProgress, [0, 1], [0, -40]);
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
@@ -112,40 +112,40 @@ function HeroSection() {
         <div className="space-y-10 order-2 lg:order-1">
           <div className="space-y-6">
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-mint-600 uppercase tracking-widest text-xs font-semibold"
             >
               AiQo
             </motion.p>
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
+              transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="text-5xl md:text-7xl font-bold text-ink-900 leading-tight tracking-tight"
             >
               ليس تطبيق فقط ، بل بُعد جديد للصحة .
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
+              transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="text-lg md:text-xl text-ink-700 font-medium max-w-xl leading-relaxed mt-6"
             >
               كابتن حمودي يقرأ يومك، يتذكر رحلتك، ويكون معاك بكل خطوة.
             </motion.p>
           </div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
+            transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-wrap gap-4 mt-10"
           >
             {/* TODO: Replace with real App Store link before launch */}
             <a
               href="https://testflight.apple.com/join/PLACEHOLDER"
-              className="group inline-flex items-center gap-3 bg-ink-900 text-white px-7 py-4 rounded-full text-base font-semibold hover:bg-ink-700 transition-all hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.3)]"
+              className="group inline-flex items-center gap-3 bg-ink-900 text-white px-7 py-4 rounded-full text-base font-semibold hover:bg-ink-700 transition-all duration-500 ease-out hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.3)]"
               aria-label="حمّل من App Store"
             >
               <Apple className="w-5 h-5" />
@@ -154,7 +154,7 @@ function HeroSection() {
             </a>
             <a
               href="#showcase"
-              className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-xl border border-white/40 text-ink-900 px-7 py-4 rounded-full text-base font-medium hover:bg-white hover:border-white/60 transition-all"
+              className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-xl border border-white/40 text-ink-900 px-7 py-4 rounded-full text-base font-medium hover:bg-white hover:border-white/60 transition-all duration-500 ease-out"
               aria-label="شوف التطبيق"
             >
               شوف التطبيق ↓
@@ -236,6 +236,7 @@ function CaptainHamoudi() {
                 width={360}
                 height={360}
                 className="relative rounded-full ring-8 ring-white/80 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)]"
+                quality={100}
                 priority
               />
             </motion.div>
@@ -320,7 +321,7 @@ function ProofSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {cards.map((card, i) => (
             <FadeIn key={card.title} delay={i * 0.1}>
-              <div className="bg-white/60 backdrop-blur-xl border border-white/40 rounded-3xl p-8 text-center hover:scale-105 transition-transform duration-500">
+              <div className="bg-white/60 backdrop-blur-xl border border-white/40 rounded-3xl p-8 text-center hover:scale-[1.03] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] transition-all duration-700 ease-out">
                 <p className={`text-7xl font-bold ${card.color}`}>{card.number}</p>
                 <p className="text-sm text-ink-700 font-semibold mt-2">{card.label}</p>
                 <p className="text-lg font-bold text-ink-900 mt-4">{card.title}</p>
@@ -479,7 +480,7 @@ function PrivacySection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {privacyPillars.map((pillar, i) => (
             <FadeIn key={pillar.title} delay={i * 0.1}>
-              <div className="bg-white/60 backdrop-blur-xl border border-white/40 rounded-3xl p-8 text-center hover:border-mint-300/40 transition-colors">
+              <div className="bg-white/60 backdrop-blur-xl border border-white/40 rounded-3xl p-8 text-center hover:border-mint-300/40 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.06)] transition-all duration-500 ease-out">
                 <div className="w-14 h-14 rounded-2xl bg-mint-100 flex items-center justify-center mx-auto mb-6">
                   <pillar.icon className="w-8 h-8 text-mint-600" />
                 </div>
@@ -685,7 +686,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start mb-12">
           {/* Right column (RTL start) — brand */}
           <div className="flex items-start gap-3">
-            <Image src="/app-icon-hd.png" alt="AiQo" width={96} height={96} className="rounded-[22px]" />
+            <Image src="/app-icon-hd.png" alt="AiQo" width={96} height={96} quality={100} className="rounded-[22px]" />
             <div>
               <span className="text-lg font-bold text-ink-900 block">AiQo</span>
               <p className="text-sm text-ink-500 mt-1 leading-relaxed">ليس تطبيق فقط ، بل بُعد جديد للصحة .</p>

@@ -150,6 +150,6 @@
   }
   html {
     @apply font-sans;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
 }
