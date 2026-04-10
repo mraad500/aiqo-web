@@ -4,18 +4,11 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import {
-  Moon,
-  Camera,
-  Heart,
-  Users,
-  Trophy,
-  Music,
   Shield,
   Smartphone,
   Database,
   ChevronDown,
   Apple,
-  Play,
   ArrowLeft,
 } from "lucide-react";
 import {
@@ -63,7 +56,7 @@ function Navigation() {
           </a>
           <div className="hidden md:flex items-center gap-1">
             {[
-              { label: "المميزات", href: "#features" },
+              { label: "المميزات", href: "#showcase" },
               { label: "كابتن حمودي", href: "#captain" },
               { label: "الأسعار", href: "#pricing" },
               { label: "تواصل", href: "#faq" },
@@ -145,8 +138,9 @@ function HeroSection() {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="flex flex-wrap gap-4"
           >
+            {/* TODO: Replace with real App Store link before launch */}
             <a
-              href="#download"
+              href="https://testflight.apple.com/join/PLACEHOLDER"
               className="group inline-flex items-center gap-3 bg-ink text-white px-7 py-4 rounded-2xl text-base font-medium hover:bg-ink/85 transition-all hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.3)]"
               aria-label="حمّل من App Store"
             >
@@ -155,7 +149,7 @@ function HeroSection() {
               <ArrowLeft className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </a>
             <a
-              href="#features"
+              href="#showcase"
               className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-xl border border-ink/[0.06] text-ink px-7 py-4 rounded-2xl text-base font-medium hover:bg-white hover:border-ink/10 transition-all"
               aria-label="شوف كيف يشتغل"
             >
@@ -215,89 +209,6 @@ function TrustStrip() {
   );
 }
 
-/* ───────────────────────────── Features ───────────────────────────── */
-const features = [
-  {
-    icon: Moon,
-    title: "هندسة النوم",
-    description: "تتبع مراحل نومك واحسب أفضل وقت للاستيقاظ",
-    tone: "sand" as const,
-  },
-  {
-    icon: Camera,
-    title: "مطبخ الكيمياء",
-    description: "صور ثلاجتك، واحصل على وجبات ذكية",
-    tone: "mint" as const,
-  },
-  {
-    icon: Heart,
-    title: "تمارين Zone 2",
-    description: "تدريب القلب الأمثل مع Apple Watch",
-    tone: "mint" as const,
-  },
-  {
-    icon: Users,
-    title: "التحديات اليومية",
-    description: "تنافس مع أصدقائك في تحديات أسبوعية",
-    tone: "mint" as const,
-  },
-  {
-    icon: Trophy,
-    title: "التحديات الأسطورية",
-    description: "مشاريع 16 أسبوع لكسر أرقام قياسية",
-    tone: "sand" as const,
-  },
-  {
-    icon: Music,
-    title: "My Vibe",
-    description: "موسيقى تتفاعل مع نبضك",
-    tone: "mint" as const,
-  },
-];
-
-function FeaturesGrid() {
-  return (
-    <section id="features" className="py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <FadeIn className="text-center mb-20">
-          <p className="text-mint-deep text-sm font-semibold mb-3 tracking-wide">المميزات</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-ink mb-5">
-            كل اللي تحتاجه في تطبيق واحد
-          </h2>
-          <p className="text-ink/40 text-lg max-w-md mx-auto">ميزات مصممة لحياتك الصحية، تعمل معاك كل يوم</p>
-        </FadeIn>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.map((feature, i) => (
-            <FadeIn key={feature.title} delay={i * 0.06}>
-              <div
-                className={`group rounded-3xl p-7 border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_-12px_rgba(0,0,0,0.08)] ${
-                  feature.tone === "sand"
-                    ? "bg-sand-card/50 border-sand/20 hover:border-sand/40"
-                    : "bg-mint-card/50 border-mint/20 hover:border-mint/40"
-                }`}
-              >
-                <div
-                  className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110 ${
-                    feature.tone === "sand" ? "bg-sand/30" : "bg-mint/30"
-                  }`}
-                >
-                  <feature.icon
-                    className={`w-6 h-6 ${
-                      feature.tone === "sand" ? "text-sand" : "text-mint-deep"
-                    }`}
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-ink mb-2">{feature.title}</h3>
-                <p className="text-ink/45 text-sm leading-relaxed">{feature.description}</p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ───────────────────────────── Captain Hamoudi ───────────────────────────── */
 function CaptainHamoudi() {
   return (
@@ -313,18 +224,9 @@ function CaptainHamoudi() {
             <span className="bg-gradient-to-l from-sand to-sand-card bg-clip-text text-transparent">كابتن حمودي</span>
           </h2>
           <p className="text-lg text-ink/50 leading-relaxed max-w-lg">
-            مدربك الشخصي بلهجة دافئة، يفهم مزاجك، ويتذكر رحلتك. مبني بذكاء اصطناعي هجين — على جهازك أولاً، وفي السحابة عند الحاجة.
+            مدربك الشخصي بلهجة دافئة. يفهمك من أول كلمة. يتذكر تفاصيلك. ويكون معاك بكل لحظة من يومك.
           </p>
-          {/* Audio player */}
-          <div className="group bg-white/70 backdrop-blur-xl border border-white/50 rounded-2xl p-4 inline-flex items-center gap-4 max-w-sm shadow-[0_4px_20px_-6px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.1)] transition-shadow cursor-pointer">
-            <div className="w-12 h-12 rounded-xl bg-mint-deep flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-              <Play className="w-5 h-5 text-white fill-white mr-[-2px]" />
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-ink">اسمع كابتن حمودي</p>
-              <p className="text-xs text-ink/35 mt-0.5">مقطع صوتي تجريبي &bull; 0:30</p>
-            </div>
-          </div>
+          {/* Audio player — hidden until real recording is ready */}
         </FadeIn>
 
         <FadeIn delay={0.2} className="flex justify-center">
@@ -520,10 +422,12 @@ const plans = [
     price: "$9.99",
     period: "/شهر",
     features: [
-      "كابتن حمودي الأساسي",
-      "Gym و Kitchen كاملين",
-      "تتبع النوم والنشاط",
-      "تحديات يومية",
+      "كابتن حمودي — محادثة كاملة بلهجتك",
+      "خطط تمرين وتغذية مخصصة",
+      "تحليل النوم والاستيقاظ الذكي",
+      "تتبع كامل للنشاط والصحة",
+      "نظام مستويات وإنجازات",
+      "تجربة Apple Watch متكاملة",
     ],
     popular: false,
   },
@@ -532,10 +436,12 @@ const plans = [
     price: "$19.99",
     period: "/شهر",
     features: [
-      "كل ميزات Core",
-      "التحديات الأسطورية كاملة",
-      "ذاكرة كابتن موسعة",
-      "نموذج ذكاء اصطناعي أقوى",
+      "كل مزايا Core",
+      "ذكاء أعمق وأكثر تفصيلاً",
+      "ذاكرة موسعة — الكابتن يتذكر أكثر",
+      "My Vibe — موسيقى تتناغم مع نبضك",
+      "التحديات الأسطورية الكاملة",
+      "إنشاء قبيلتك الخاصة",
     ],
     popular: true,
   },
@@ -580,8 +486,9 @@ function PricingSection() {
                     </li>
                   ))}
                 </ul>
+                {/* TODO: Replace with real App Store link before launch */}
                 <a
-                  href="#download"
+                  href="https://testflight.apple.com/join/PLACEHOLDER"
                   className={`block w-full text-center py-3.5 rounded-xl text-sm font-semibold transition-all ${
                     plan.popular
                       ? "bg-ink text-white hover:bg-ink/85 hover:shadow-[0_8px_20px_-4px_rgba(0,0,0,0.2)]"
@@ -604,23 +511,23 @@ function PricingSection() {
 const faqs = [
   {
     question: "متى يطلق التطبيق؟",
-    answer: "قريباً جداً. سجّل الآن وراح نرسلك إشعار أول ما ينزل.",
+    answer: "قريباً جداً. AiQo بمراحله النهائية، والإطلاق الرسمي خلال 2026.",
   },
   {
-    question: "هل يعمل بدون إنترنت؟",
-    answer: "نعم، أغلب الميزات تشتغل على جهازك مباشرة بدون ما تحتاج اتصال.",
+    question: "هل يشتغل بدون إنترنت؟",
+    answer: "أغلب المميزات تشتغل على جهازك مباشرة. الإنترنت يحتاج فقط لميزات معينة.",
   },
   {
     question: "هل أحتاج Apple Watch؟",
-    answer: "لا، التطبيق يشتغل بدونها. لكن Apple Watch تضيف قيمة كبيرة لتتبع النشاط ونبض القلب.",
+    answer: "لا، اختياري. لكن إذا عندك، التجربة تصير أعمق وأذكى.",
   },
   {
-    question: "كيف أحمي بياناتي الصحية؟",
-    answer: "نتبع أعلى معايير Apple لحماية البيانات الصحية. بياناتك تبقى على جهازك ولا نرسل شي خام للسحابة.",
+    question: "كيف تحمون بياناتي الصحية؟",
+    answer: "بياناتك الحساسة ما تطلع من جهازك. نتبع أعلى معايير Apple للخصوصية.",
   },
   {
-    question: "هل يدعم لهجات عربية أخرى؟",
-    answer: "كابتن حمودي يحچي بلهجته الدافئة، والواجهة بالعربي الفصيح. ندرس إضافة لهجات أخرى مستقبلاً.",
+    question: "هل التجربة المجانية تتطلب بطاقة ائتمان؟",
+    answer: "لا. ٧ أيام كاملة بدون أي بطاقة، بدون أي التزام.",
   },
 ];
 
@@ -672,8 +579,9 @@ function FinalCTA() {
               <p className="text-white/50 text-lg mb-10 max-w-md mx-auto">
                 حمّل AiQo وابدأ أسبوع تجربة مجانية اليوم
               </p>
+              {/* TODO: Replace with real App Store link before launch */}
               <a
-                href="#"
+                href="https://testflight.apple.com/join/PLACEHOLDER"
                 className="group inline-flex items-center gap-3 bg-white text-ink px-8 py-4 rounded-2xl text-base font-semibold hover:bg-white/90 transition-all hover:shadow-[0_8px_30px_-6px_rgba(255,255,255,0.3)]"
                 aria-label="حمّل AiQo من App Store"
               >
@@ -729,7 +637,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <TrustStrip />
-        <FeaturesGrid />
         <CaptainHamoudi />
         <ShowcaseSection />
         <PrivacySection />
