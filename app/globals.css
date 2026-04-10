@@ -5,15 +5,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Brand Colors */
-  --color-mint: #B7E5D2;
+  /* Brand Colors — matched to app home screen */
+  --color-mint: #C8EDD9;
   --color-mint-deep: #5ECDB7;
-  --color-mint-50: #f0faf5;
-  --color-sand: #EBCF97;
-  --color-sand-10: rgba(235, 207, 151, 0.1);
+  --color-mint-50: #eef9f3;
+  --color-mint-card: #D4F0E0;
+  --color-sand: #E8D5A8;
+  --color-sand-card: #F0E4C4;
+  --color-sand-10: rgba(232, 213, 168, 0.1);
   --color-ink: #0A0A0A;
   --color-bg: #FAFAF7;
-  --color-card-surface: rgba(255, 255, 255, 0.6);
+  --color-card-surface: rgba(255, 255, 255, 0.7);
 
   /* Typography */
   --font-sans: var(--font-arabic), "IBM Plex Sans Arabic", sans-serif;

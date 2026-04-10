@@ -92,14 +92,20 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Phone mockup placeholder */}
+        {/* Phone mockup with real screenshot */}
         <div className="flex justify-center lg:justify-start">
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="relative w-[280px] h-[560px] bg-ink/5 rounded-[40px] border-2 border-ink/10 flex items-center justify-center"
+            className="relative w-[280px] h-[560px] rounded-[40px] border-[6px] border-ink/10 overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] bg-white"
           >
-            <span className="text-ink/20 text-sm font-medium">iPhone Mockup</span>
+            <Image
+              src="/app-screenshot.png"
+              alt="شاشة AiQo الرئيسية"
+              fill
+              className="object-cover object-top"
+              priority
+            />
           </motion.div>
         </div>
       </div>
@@ -126,31 +132,37 @@ const features = [
     icon: Moon,
     title: "هندسة النوم",
     description: "تتبع مراحل نومك واحسب أفضل وقت للاستيقاظ",
+    tone: "sand" as const,
   },
   {
     icon: Camera,
     title: "مطبخ الكيمياء",
     description: "صور ثلاجتك، واحصل على وجبات ذكية",
+    tone: "mint" as const,
   },
   {
     icon: Heart,
     title: "تمارين Zone 2",
     description: "تدريب القلب الأمثل مع Apple Watch",
+    tone: "mint" as const,
   },
   {
     icon: Users,
     title: "قبيلتك (إمارة)",
     description: "تنافس مع أصدقائك في تحديات أسبوعية",
+    tone: "mint" as const,
   },
   {
     icon: Trophy,
     title: "التحديات الأسطورية",
     description: "مشاريع 16 أسبوع لكسر أرقام قياسية",
+    tone: "sand" as const,
   },
   {
     icon: Music,
     title: "My Vibe",
     description: "موسيقى Spotify تتفاعل مع نبضك",
+    tone: "mint" as const,
   },
 ];
 
@@ -172,10 +184,18 @@ function FeaturesGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-white/60 backdrop-blur-xl border border-white/40 rounded-[20px] p-8 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_48px_-12px_rgba(0,0,0,0.12)] transition-shadow"
+              className={`rounded-[20px] p-8 border transition-shadow hover:shadow-[0_12px_48px_-12px_rgba(0,0,0,0.08)] ${
+                feature.tone === "sand"
+                  ? "bg-sand-card/60 border-sand/30"
+                  : "bg-mint-card/60 border-mint/30"
+              }`}
             >
-              <div className="w-12 h-12 rounded-2xl bg-mint/40 flex items-center justify-center mb-5">
-                <feature.icon className="w-6 h-6 text-mint-deep" />
+              <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${
+                feature.tone === "sand" ? "bg-sand/40" : "bg-mint/40"
+              }`}>
+                <feature.icon className={`w-6 h-6 ${
+                  feature.tone === "sand" ? "text-sand" : "text-mint-deep"
+                }`} />
               </div>
               <h3 className="text-lg font-semibold text-ink mb-2">{feature.title}</h3>
               <p className="text-ink/50 text-sm leading-relaxed">{feature.description}</p>
