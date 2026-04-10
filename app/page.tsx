@@ -51,7 +51,7 @@ function Navigation() {
       <div className="mx-auto max-w-7xl px-6 pt-4">
         <div className="flex items-center justify-between bg-white/70 backdrop-blur-2xl border border-white/50 rounded-2xl px-6 py-3 shadow-[0_2px_20px_-4px_rgba(0,0,0,0.06)]">
           <a href="/" className="flex items-center gap-2.5">
-            <Image src="/app-icon-hd.png" alt="AiQo" width={32} height={32} className="rounded-lg" />
+            <Image src="/app-icon-hd.png" alt="AiQo" width={72} height={72} className="rounded-[18px]" />
             <span className="text-xl font-bold text-ink-900 tracking-tight">AiQo</span>
           </a>
           <div className="hidden md:flex items-center gap-1">
@@ -283,14 +283,14 @@ function HistorySection() {
 function ProofSection() {
   const cards = [
     {
-      number: "١٦",
+      number: "16",
       label: "أسبوع",
       title: "رحلة التحديات الأسطورية",
       subtitle: "مشاريع طويلة مدروسة، مو تحديات يومية عابرة",
       color: "text-mint-600",
     },
     {
-      number: "٢٢+",
+      number: "22+",
       label: "مستوى",
       title: "نظام تطور مدروس",
       subtitle: "كل خطوة ترفع مستواك، وتقربك من النسخة الأقوى منك",
@@ -535,7 +535,7 @@ function PricingSection() {
         <FadeIn className="text-center mb-20">
           <p className="text-mint-600 text-sm font-semibold mb-3 tracking-wide">الأسعار</p>
           <h2 className="text-3xl md:text-5xl font-bold text-ink-900 mb-5">خطة لكل هدف.</h2>
-          <p className="text-ink-500 text-lg">٧ أيام تجربة مجانية &bull; بدون التزام &bull; إلغاء بأي وقت</p>
+          <p className="text-ink-500 text-lg">7 أيام تجربة مجانية &bull; بدون التزام &bull; إلغاء بأي وقت</p>
         </FadeIn>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start max-w-3xl mx-auto">
           {plans.map((plan, i) => (
@@ -587,7 +587,7 @@ function PricingSection() {
           ))}
         </div>
         <p className="text-center text-ink-500 text-sm mt-10">
-          ٧ أيام مجانية بالكامل &bull; لا تحتاج بطاقة ائتمان &bull; إلغاء بأي وقت
+          7 أيام مجانية بالكامل &bull; لا تحتاج بطاقة ائتمان &bull; إلغاء بأي وقت
         </p>
       </div>
     </section>
@@ -614,7 +614,7 @@ const faqs = [
   },
   {
     question: "هل التجربة المجانية تتطلب بطاقة ائتمان؟",
-    answer: "لا. ٧ أيام كاملة بدون أي بطاقة، بدون أي التزام.",
+    answer: "لا. 7 أيام كاملة بدون أي بطاقة، بدون أي التزام.",
   },
 ];
 
@@ -659,7 +659,7 @@ function FinalCTA() {
             جاهز تتعرف على كابتن حمودي؟
           </h2>
           <p className="text-lg text-ink-500 mt-4">
-            ٧ أيام مجانية. بدون بطاقة. بدون التزام.
+            7 أيام مجانية. بدون بطاقة. بدون التزام.
           </p>
           {/* TODO: Replace with real App Store link before launch */}
           <a
@@ -685,7 +685,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start mb-12">
           {/* Right column (RTL start) — brand */}
           <div className="flex items-start gap-3">
-            <Image src="/app-icon-hd.png" alt="AiQo" width={48} height={48} className="rounded-xl" />
+            <Image src="/app-icon-hd.png" alt="AiQo" width={80} height={80} className="rounded-[20px]" />
             <div>
               <span className="text-lg font-bold text-ink-900 block">AiQo</span>
               <p className="text-sm text-ink-500 mt-1 leading-relaxed">ليس تطبيق فقط ، بل بُعد جديد للصحة .</p>

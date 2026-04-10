@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Arabic, Inter } from "next/font/google";
+import { Readex_Pro, Inter } from "next/font/google";
 import "./globals.css";
 
-const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+const readexPro = Readex_Pro({
   variable: "--font-arabic",
   subsets: ["arabic", "latin"],
   weight: ["400", "500", "600", "700"],
@@ -50,7 +50,7 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={`${ibmPlexArabic.variable} ${inter.variable} h-full antialiased`}
+      className={`${readexPro.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

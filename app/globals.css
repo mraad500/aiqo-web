@@ -47,9 +47,9 @@
   --color-card-surface: rgba(255, 255, 255, 0.75);
 
   /* Typography */
-  --font-sans: var(--font-arabic), "IBM Plex Sans Arabic", sans-serif;
+  --font-sans: var(--font-arabic), "Readex Pro", sans-serif;
   --font-mono: var(--font-latin), "Inter", sans-serif;
-  --font-heading: var(--font-arabic), "IBM Plex Sans Arabic", sans-serif;
+  --font-heading: var(--font-arabic), "Readex Pro", sans-serif;
 
   /* Spacing */
   --spacing-section: 6rem;
@@ -145,7 +145,7 @@
   }
   body {
     @apply bg-cream-50 text-ink-900;
-    font-family: var(--font-arabic), "IBM Plex Sans Arabic", sans-serif;
+    font-family: var(--font-arabic), "Readex Pro", sans-serif;
   }
   html {
     @apply font-sans;
