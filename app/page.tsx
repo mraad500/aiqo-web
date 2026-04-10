@@ -179,6 +179,7 @@ function HeroSection() {
                 "/screens/workout.webp",
                 "/screens/captain-screen.webp",
                 "/screens/vibe.webp",
+                "/screens/profile.webp",
               ]}
               alt="AiQo"
               priority
@@ -447,6 +448,14 @@ function ShowcaseSection() {
             title="موسيقى تتناغم مع نبضك."
             body="جسمك يشتغل، والموسيقى تتغير معاه. AiQo يختار اللي يناسب طاقتك بكل لحظة."
             images={["/screens/vibe.webp"]}
+          />
+
+          <FeatureBlock
+            alignment="phone-start"
+            eyebrow="الملف الشخصي"
+            title="رحلتك كلها بمكان واحد."
+            body="مستواك، رصيدك، بيانات جسمك، وتقارير أسبوعية — كلها مرتبة بملفك الشخصي. تابع تقدمك وشوف وين وصلت."
+            images={["/screens/profile.webp"]}
           />
         </div>
       </div>
