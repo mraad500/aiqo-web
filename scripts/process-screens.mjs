@@ -63,8 +63,8 @@ async function processImages() {
     const inSize = inStat.size;
 
     await sharp(inputPath)
-      .resize({ width: 1200, withoutEnlargement: true })
-      .webp({ quality: 92, effort: 6 })
+      .resize({ width: 1600, withoutEnlargement: true })
+      .webp({ quality: 97, effort: 6, nearLossless: true })
       .toFile(outputPath);
 
     const outStat = await stat(outputPath);

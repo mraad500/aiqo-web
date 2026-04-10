@@ -5,17 +5,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Brand Colors — matched to app home screen */
-  --color-mint: #C8EDD9;
-  --color-mint-deep: #5ECDB7;
-  --color-mint-50: #eef9f3;
-  --color-mint-card: #D4F0E0;
-  --color-sand: #E8D5A8;
-  --color-sand-card: #F0E4C4;
-  --color-sand-10: rgba(232, 213, 168, 0.1);
+  /* Brand Colors — exact match to app screens */
+  --color-mint: #D5EDDC;
+  --color-mint-deep: #6ECFA2;
+  --color-mint-50: #EDF7F0;
+  --color-mint-card: #E0F3E5;
+  --color-sand: #EDD9B3;
+  --color-sand-card: #F5E8CC;
+  --color-sand-10: rgba(237, 217, 179, 0.12);
   --color-ink: #0A0A0A;
-  --color-bg: #FAFAF7;
-  --color-card-surface: rgba(255, 255, 255, 0.7);
+  --color-bg: #FEFDFB;
+  --color-card-surface: rgba(255, 255, 255, 0.75);
 
   /* Typography */
   --font-sans: var(--font-arabic), "IBM Plex Sans Arabic", sans-serif;
@@ -76,7 +76,7 @@
 }
 
 :root {
-  --background: #FAFAF7;
+  --background: #FEFDFB;
   --foreground: #0A0A0A;
   --card: rgba(255, 255, 255, 0.6);
   --card-foreground: #0A0A0A;
@@ -88,26 +88,26 @@
   --secondary-foreground: #0A0A0A;
   --muted: #f5f5f0;
   --muted-foreground: #6b6b6b;
-  --accent: #B7E5D2;
+  --accent: #D5EDDC;
   --accent-foreground: #0A0A0A;
   --destructive: oklch(0.577 0.245 27.325);
   --border: rgba(0, 0, 0, 0.06);
   --input: rgba(0, 0, 0, 0.06);
-  --ring: #5ECDB7;
-  --chart-1: #B7E5D2;
-  --chart-2: #5ECDB7;
-  --chart-3: #EBCF97;
+  --ring: #6ECFA2;
+  --chart-1: #D5EDDC;
+  --chart-2: #6ECFA2;
+  --chart-3: #EDD9B3;
   --chart-4: #0A0A0A;
   --chart-5: #6b6b6b;
   --radius: 0.625rem;
-  --sidebar: #FAFAF7;
+  --sidebar: #FEFDFB;
   --sidebar-foreground: #0A0A0A;
   --sidebar-primary: #0A0A0A;
   --sidebar-primary-foreground: #FAFAF7;
   --sidebar-accent: #f5f5f0;
   --sidebar-accent-foreground: #0A0A0A;
   --sidebar-border: rgba(0, 0, 0, 0.06);
-  --sidebar-ring: #5ECDB7;
+  --sidebar-ring: #6ECFA2;
 }
 
 @layer base {

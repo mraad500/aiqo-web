@@ -74,7 +74,7 @@ export function PhoneGallery({
                   src={images[index]}
                   alt={`${alt} ${index + 1}`}
                   fill
-                  sizes="(max-width: 768px) 260px, 280px"
+                  sizes="(max-width: 768px) 520px, 560px"
                   className="object-cover"
                   priority={priority && index === 0}
                 />
