@@ -616,7 +616,7 @@ function Footer() {
             <a href="/support" className="hover:text-ink transition-colors">Support</a>
           </div>
           <div className="flex gap-6 text-sm text-ink/40 md:justify-end">
-            <a href="#" className="hover:text-ink transition-colors" aria-label="Instagram">Instagram</a>
+            <a href="https://www.instagram.com/aiqoapp" target="_blank" rel="noopener noreferrer" className="hover:text-ink transition-colors" aria-label="Instagram">Instagram</a>
             <a href="#" className="hover:text-ink transition-colors" aria-label="X">X</a>
             <a href="#" className="hover:text-ink transition-colors" aria-label="TikTok">TikTok</a>
           </div>
