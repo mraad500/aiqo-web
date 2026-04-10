@@ -389,9 +389,9 @@ function ShowcaseSection() {
 
           <FeatureBlock
             alignment="phone-start"
-            eyebrow="التحديات الأسطورية"
-            title="مشاريع 16 أسبوع تغيّرك."
-            body="ما هي تحديات يومية. هاي رحلات طويلة، مدروسة، توصلك لمستوى ما تخيلته. كل أسبوع خطوة. كل خطوة قريبك من النسخة الأقوى منك."
+            eyebrow="قِمَم"
+            title="أرقام قياسية، نكسرها بذكاء بايولوجي."
+            body="اختر رقماً قياسياً عالمياً، ودع كابتن حمودي يبني لك مشروعاً من 16 أسبوعاً يتكيف مع فسيولوجية جسمك أسبوعياً."
             images={[
               "/screens/legendary-1.webp",
               "/screens/legendary-2.webp",
@@ -405,7 +405,65 @@ function ShowcaseSection() {
               "/screens/legendary-10.webp",
             ]}
             interval={4000}
-          />
+          >
+            <div className="mt-8 space-y-5 max-w-lg">
+              <div className="flex gap-4">
+                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-mint-100 text-mint-700 text-sm font-bold">
+                  1
+                </span>
+                <div>
+                  <p className="font-bold text-ink-900 mb-1">
+                    قياس المحرك
+                    <span className="text-ink-500 font-medium text-sm mr-2">
+                      Engine Test
+                    </span>
+                  </p>
+                  <p className="text-sm text-ink-600 leading-relaxed">
+                    فحص دقيق للياقتك عبر Apple Watch لمدة 3 دقائق. نقيس احتياطي
+                    نبضك (HRR) وسرعة استرداد جهازك العصبي لنحدد نقطة انطلاقك
+                    الحقيقية — بجانب وزنك وعمرك وطولك.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-mint-100 text-mint-700 text-sm font-bold">
+                  2
+                </span>
+                <div>
+                  <p className="font-bold text-ink-900 mb-1">
+                    خطة حية تتنفس معك
+                    <span className="text-ink-500 font-medium text-sm mr-2">
+                      Dynamic AI Plan
+                    </span>
+                  </p>
+                  <p className="text-sm text-ink-600 leading-relaxed">
+                    لا جداول ثابتة. كابتن حمودي يكتب تمارينك ونظامك الغذائي
+                    لأسبوع واحد فقط، مبنية على بياناتك الفعلية.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-mint-100 text-mint-700 text-sm font-bold">
+                  3
+                </span>
+                <div>
+                  <p className="font-bold text-ink-900 mb-1">
+                    ضبط البوصلة الأسبوعي
+                    <span className="text-ink-500 font-medium text-sm mr-2">
+                      Weekly Review
+                    </span>
+                  </p>
+                  <p className="text-sm text-ink-600 leading-relaxed">
+                    نهاية كل أسبوع، تراجع أداءك ووزنك ومستوى إرهاقك مع
+                    الكابتن. بناءً على نتائجك، يولّد الذكاء الاصطناعي خطة
+                    الأسبوع التالي — تطور مستمر بدون إصابات.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </FeatureBlock>
 
           <FeatureBlock
             alignment="phone-end"

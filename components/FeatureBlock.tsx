@@ -11,6 +11,7 @@ interface FeatureBlockProps {
   images: string[];
   interval?: number;
   priority?: boolean;
+  children?: React.ReactNode;
 }
 
 export function FeatureBlock({
@@ -21,6 +22,7 @@ export function FeatureBlock({
   images,
   interval,
   priority,
+  children,
 }: FeatureBlockProps) {
   const phoneFirst = alignment === "phone-start";
 
@@ -57,6 +59,7 @@ export function FeatureBlock({
         <p className="text-lg text-ink-700 font-medium leading-relaxed max-w-lg">
           {body}
         </p>
+        {children}
       </motion.div>
     </div>
   );
