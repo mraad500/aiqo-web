@@ -51,7 +51,7 @@ function Navigation() {
       <div className="mx-auto max-w-7xl px-6 pt-4">
         <div className="flex items-center justify-between bg-white/70 backdrop-blur-2xl border border-white/50 rounded-2xl px-6 py-3 shadow-[0_2px_20px_-4px_rgba(0,0,0,0.06)]">
           <a href="/" className="flex items-center gap-2.5">
-            <Image src="/app-icon.png" alt="AiQo" width={34} height={34} className="rounded-[10px]" />
+            <Image src="/app-icon-hd.png" alt="AiQo" width={34} height={34} className="rounded-[10px]" />
             <span className="text-lg font-bold text-ink tracking-tight">AiQo</span>
           </a>
           <div className="hidden md:flex items-center gap-1">
@@ -572,7 +572,7 @@ function FinalCTA() {
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-mint-deep/10 to-transparent" />
             <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-t from-sand/10 to-transparent" />
             <div className="relative">
-              <Image src="/app-icon.png" alt="AiQo" width={56} height={56} className="rounded-2xl mx-auto mb-8 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.3)]" />
+              <Image src="/app-icon-hd.png" alt="AiQo" width={56} height={56} className="rounded-2xl mx-auto mb-8 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.3)]" />
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
                 جاهز تبدي رحلتك؟
               </h2>
@@ -604,7 +604,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start mb-12">
           <div className="flex items-start gap-3">
-            <Image src="/app-icon.png" alt="AiQo" width={40} height={40} className="rounded-xl" />
+            <Image src="/app-icon-hd.png" alt="AiQo" width={40} height={40} className="rounded-xl" />
             <div>
               <span className="text-lg font-bold text-ink block">AiQo</span>
               <p className="text-sm text-ink/35 mt-1 leading-relaxed">أول نظام صحي ذكي بالعربي.<br />مصمم في الإمارات.</p>

@@ -36,7 +36,8 @@ export const metadata: Metadata = {
       "كابتن حمودي يدربك، يحفزك، ويرافقك بكل خطوة. مصمم في الإمارات.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
