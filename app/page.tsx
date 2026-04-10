@@ -177,7 +177,7 @@ function HeroSection() {
               images={[
                 "/screens/home.webp",
                 "/screens/workout.webp",
-                "/screens/captain-chat.webp",
+                "/screens/captain-screen.webp",
                 "/screens/vibe.webp",
               ]}
               alt="AiQo"
