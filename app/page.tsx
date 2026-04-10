@@ -174,10 +174,15 @@ function HeroSection() {
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
             <PhoneGallery
-              images={["/screens/captain-chat.webp", "/screens/home.webp"]}
+              images={[
+                "/screens/home.webp",
+                "/screens/workout.webp",
+                "/screens/captain-chat.webp",
+                "/screens/vibe.webp",
+              ]}
               alt="AiQo"
               priority
-              interval={5000}
+              interval={4000}
             />
           </motion.div>
         </motion.div>
