@@ -172,21 +172,39 @@ function HeroSection() {
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="relative"
           >
-            {/* Phone glow */}
-            <div className="absolute -inset-8 bg-mint/15 blur-3xl rounded-full" />
-            {/* Phone frame */}
-            <div className="relative w-[280px] h-[600px] rounded-[44px] border-[8px] border-ink/[0.08] overflow-hidden shadow-[0_30px_80px_-20px_rgba(0,0,0,0.2)] bg-white">
-              {/* Notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[30px] bg-ink/[0.08] rounded-b-2xl z-10" />
-              <Image
-                src="/app-screenshot.png"
-                alt="شاشة AiQo الرئيسية"
-                fill
-                className="object-cover object-center"
-                sizes="280px"
-                priority
-              />
+            {/* Ambient glow */}
+            <div className="absolute -inset-12 bg-gradient-to-b from-mint/20 via-mint/10 to-sand/10 blur-3xl rounded-full opacity-80" />
+
+            {/* iPhone shell */}
+            <div className="relative w-[280px] h-[580px] rounded-[52px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] p-[3px] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.35),_0_0_0_1px_rgba(255,255,255,0.05)_inset]">
+              {/* Inner bezel highlight */}
+              <div className="absolute inset-[1px] rounded-[51px] bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none z-20" />
+
+              {/* Screen area */}
+              <div className="relative w-full h-full rounded-[49px] overflow-hidden bg-white">
+                {/* Dynamic Island */}
+                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[90px] h-[26px] bg-black rounded-full z-10 shadow-[0_0_0_1px_rgba(0,0,0,0.1)]" />
+
+                {/* Screenshot */}
+                <Image
+                  src="/app-screenshot.png"
+                  alt="شاشة AiQo الرئيسية"
+                  fill
+                  className="object-cover object-center"
+                  sizes="280px"
+                  priority
+                />
+
+                {/* Screen glass reflection */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-transparent pointer-events-none z-10" />
+              </div>
             </div>
+
+            {/* Side button (power) */}
+            <div className="absolute -left-[1.5px] top-[140px] w-[3px] h-[60px] bg-[#2a2a2a] rounded-l-sm" />
+            {/* Volume buttons */}
+            <div className="absolute -right-[1.5px] top-[100px] w-[3px] h-[30px] bg-[#2a2a2a] rounded-r-sm" />
+            <div className="absolute -right-[1.5px] top-[140px] w-[3px] h-[30px] bg-[#2a2a2a] rounded-r-sm" />
           </motion.div>
         </motion.div>
       </div>
