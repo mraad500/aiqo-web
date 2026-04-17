@@ -8,7 +8,6 @@ import { PhoneFrame } from "@/components/PhoneFrame";
 import { PictureScreen } from "@/components/Picture";
 import { siteConfig } from "@/lib/config";
 import { MagneticButton } from "@/components/MagneticButton";
-import { KineticHeading } from "@/components/KineticHeading";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -35,8 +34,10 @@ export function Hero() {
       <div className="relative z-[2] mx-auto max-w-7xl w-full px-5 md:px-8 grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-8 items-center">
         {/* Text */}
         <motion.div style={{ y: headlineY, opacity }} className="order-2 lg:order-1 text-right">
-          <KineticHeading
-            as="h1"
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: EASE }}
             className="font-display text-ink font-bold"
             style={{
               fontSize: "clamp(32px, 6.4vw, 80px)",
@@ -45,7 +46,7 @@ export function Hero() {
             }}
           >
             ليس تطبيقاً فقط، بل بُعدٌ جديد للصحة.
-          </KineticHeading>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
