@@ -14,7 +14,7 @@ export default function SupportPage() {
         <h1 className="text-3xl font-bold text-ink mb-8">الدعم / Support</h1>
 
         <div className="space-y-8 text-ink/70 leading-relaxed">
-          <section>
+          <section id="contact">
             <h2 className="text-xl font-semibold text-ink mb-4">تواصل معنا</h2>
             <p className="mb-4">
               نحن هنا لمساعدتك. تواصل معنا عبر البريد الإلكتروني وسنرد عليك في أقرب وقت.
