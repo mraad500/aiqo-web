@@ -8,7 +8,6 @@ import { PhoneFrame } from "@/components/PhoneFrame";
 import { PictureScreen } from "@/components/Picture";
 import { siteConfig } from "@/lib/config";
 import { MagneticButton } from "@/components/MagneticButton";
-import { KineticHeading } from "@/components/KineticHeading";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -36,32 +35,16 @@ export function Hero() {
         {/* Text */}
         <motion.div style={{ y: headlineY, opacity }} className="order-2 lg:order-1 text-right">
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: EASE }}
-            className="eyebrow mb-5"
-          >
-            AIQO &nbsp;·&nbsp; مقرّها الإمارات
-          </motion.p>
-
-          <KineticHeading
-            as="h1"
-            className="font-display text-ink font-bold"
-            style={{
-              fontSize: "clamp(40px, 7.5vw, 96px)",
-              lineHeight: 0.96,
-              letterSpacing: "-0.015em",
-            }}
-          >
-            {"ليس تطبيقاً.\nبُعدٌ جديد للصحة."}
-          </KineticHeading>
-
-          <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.22, ease: EASE }}
-            className="text-[17px] md:text-[19px] text-ink-soft leading-[1.65] font-medium mt-7 max-w-[520px] mr-0 ml-auto"
-            style={{ marginInlineStart: "auto", marginInlineEnd: 0 }}
+            transition={{ duration: 0.9, ease: EASE }}
+            className="font-display font-bold text-ink leading-[1.15] max-w-[560px] mr-0 ml-auto"
+            style={{
+              marginInlineStart: "auto",
+              marginInlineEnd: 0,
+              fontSize: "clamp(28px, 4.2vw, 44px)",
+              letterSpacing: "-0.01em",
+            }}
           >
             كابتن حمودي يقرأ يومك، يتذكّر رحلتك، ويكون معاك بكل خطوة — بلهجتك.
           </motion.p>
