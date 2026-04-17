@@ -175,12 +175,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Prevent horizontal overflow from decorative blobs / transforms on mobile.
+       clip (not hidden) preserves sticky positioning in Showcase. */
+    overflow-x: clip;
   }
   body {
     @apply bg-bg text-ink;
     font-family: var(--font-sans);
     font-weight: 400;
     font-feature-settings: "ss01" on, "cv01" on, "cv02" on, "cv03" on;
+    overflow-x: clip;
+    width: 100%;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);

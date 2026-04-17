@@ -36,7 +36,7 @@ export function AppleWatch() {
         }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-5 md:px-8 grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
+      <div className="relative mx-auto max-w-7xl px-5 md:px-8 grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center [&>*]:min-w-0">
         {/* Text */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -103,7 +103,7 @@ export function AppleWatch() {
         </motion.div>
 
         {/* Watches */}
-        <div className="order-1 lg:order-2 relative flex items-center justify-center gap-6 md:gap-10 min-h-[400px]">
+        <div className="order-1 lg:order-2 relative flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-6 md:gap-10 min-h-[400px]">
           <motion.div
             initial={{ opacity: 0, y: 30, rotate: -6 }}
             whileInView={{ opacity: 1, y: 0, rotate: -4 }}
