@@ -1,7 +1,8 @@
 /* ── AiQo Site Configuration ──
- * Change `approved` to true and add the App Store URL
- * once Apple approves the build. The CTA buttons will
- * automatically become active and clickable.
+ * The app is LIVE on the App Store, so `approved` is true and `url`
+ * points at the store listing — this activates every download CTA
+ * across the site. Set `approved` to false only to revert the site
+ * to the pre-launch "coming soon" state.
  */
 
 export const siteConfig = {
