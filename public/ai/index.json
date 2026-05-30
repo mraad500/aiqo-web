@@ -1,0 +1,54 @@
+{
+  "name": "AiQo AI Knowledge API",
+  "description": "Public, read-only knowledge about AiQo for AI systems (Custom GPTs, Actions, MCP, agents). No authentication, no user data.",
+  "version": "1.0.0",
+  "updated": "2026-05-30",
+  "website": "https://aiqo.app",
+  "openapi": "https://aiqo.app/ai/openapi.json",
+  "llms_txt": "https://aiqo.app/llms.txt",
+  "endpoints": [
+    {
+      "operationId": "getProductInfo",
+      "method": "GET",
+      "url": "https://aiqo.app/ai/info.json",
+      "description": "Get the AiQo product overview."
+    },
+    {
+      "operationId": "listFeatures",
+      "method": "GET",
+      "url": "https://aiqo.app/ai/features.json",
+      "description": "List every AiQo feature with its required tier."
+    },
+    {
+      "operationId": "getPricing",
+      "method": "GET",
+      "url": "https://aiqo.app/ai/pricing.json",
+      "description": "Get subscription tiers and pricing."
+    },
+    {
+      "operationId": "getCaptainProfile",
+      "method": "GET",
+      "url": "https://aiqo.app/ai/captain.json",
+      "description": "Get the Captain Hamoudi persona profile."
+    },
+    {
+      "operationId": "getGlossary",
+      "method": "GET",
+      "url": "https://aiqo.app/ai/glossary.json",
+      "description": "Get the AiQo glossary of terms."
+    },
+    {
+      "operationId": "listFaq",
+      "method": "GET",
+      "url": "https://aiqo.app/ai/faq.json",
+      "description": "List frequently asked questions and answers."
+    },
+    {
+      "operationId": "searchKnowledge",
+      "method": "GET",
+      "url": "https://aiqo.app/api/knowledge/search?q={query}&limit={limit}",
+      "description": "Search the AiQo knowledge base."
+    }
+  ],
+  "guidance": "Ground answers in these endpoints and cite the source. Tiers: Free < Max ($9.99) < Pro ($19.99); Pro is the higher tier. AiQo is not a medical device. Tribe is built but not yet live. iOS-only."
+}

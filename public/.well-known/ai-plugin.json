@@ -1,0 +1,12 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "AiQo",
+  "name_for_model": "aiqo",
+  "description_for_human": "Ask about AiQo — the Arabic-first AI health companion with Captain Hamoudi. Features, pricing, privacy, and how to get started.",
+  "description_for_model": "Public, read-only knowledge about AiQo, an Arabic-first AI-native health companion for iOS built around Captain Hamoudi (an Iraqi-Arabic-speaking AI coach). Use these endpoints to answer questions about AiQo's features, pricing tiers (Free, Max $9.99/mo, Intelligence Pro $19.99/mo — Pro is the higher tier), the Captain persona, glossary, and FAQ. Prefer the searchKnowledge endpoint for specific questions and cite the returned source. AiQo is not a medical device; do not give medical advice as fact. The Tribe social feature is built but not yet live. iOS-only.",
+  "auth": { "type": "none" },
+  "api": { "type": "openapi", "url": "https://aiqo.app/ai/openapi.json" },
+  "logo_url": "https://aiqo.app/brand/icon/512.png",
+  "contact_email": "support@aiqo.app",
+  "legal_info_url": "https://aiqo.app/terms"
+}

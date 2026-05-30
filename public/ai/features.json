@@ -1,0 +1,28 @@
+{
+  "features": [
+    { "id": "home", "name": "Home / Daily Dashboard", "nameAr": "الرئيسية", "minTier": "free", "summary": "Your day at a glance: steps, calories, sleep, energy, water and workouts, plus the animated 24-hour Daily Aura." },
+    { "id": "health-tracking", "name": "Apple Health tracking", "nameAr": "تتبّع الصحة", "minTier": "free", "summary": "Continuous read of HealthKit (steps, heart rate, HRV, energy, sleep, VO2max, workouts) with optional write-back." },
+    { "id": "xp-leveling", "name": "XP & Leveling", "nameAr": "النقاط والمستويات", "minTier": "free", "summary": "Earn XP for actions; progress through shield tiers from Wood to Legendary." },
+    { "id": "quests", "name": "Daily Quests", "nameAr": "التحديات اليومية", "minTier": "free", "summary": "Small daily and weekly tasks that award XP and keep you moving." },
+    { "id": "learning-spark", "name": "Learning Spark", "nameAr": "شرارة التعلّم", "minTier": "free", "summary": "Complete an online course and verify the certificate on-device for a large XP reward." },
+    { "id": "outdoor-run", "name": "Outdoor Run (GPS)", "nameAr": "الجري", "minTier": "free", "summary": "GPS running with a 3D map, chase camera, live stats, and interactive route replay." },
+    { "id": "smart-water", "name": "Smart Water Tracking", "nameAr": "تتبّع الماء", "minTier": "free", "summary": "Hydration goals and reminders that adapt to activity, climate, and time of day." },
+    { "id": "progress-photos", "name": "Progress Photos", "nameAr": "صور التقدّم", "minTier": "free", "summary": "Before/after body-transformation tracking with weight, notes, and side-by-side compare." },
+    { "id": "weekly-report", "name": "Weekly Report", "nameAr": "التقرير الأسبوعي", "minTier": "free", "summary": "A 7-day vs. prior-week summary with a 0-100 score, charts, and a shareable card." },
+    { "id": "watch-widgets", "name": "Apple Watch app & Widgets", "nameAr": "تطبيق الساعة", "minTier": "free", "summary": "Live activity rings, preset workouts, real-time heart rate, quick Captain check-in, and home/watch widgets." },
+    { "id": "captain-chat", "name": "Captain Hamoudi chat", "nameAr": "كابتن حمودي", "minTier": "max", "summary": "The AI coach: a personality-driven chat with memory, bio-context, structured workout/meal cards, and quick replies." },
+    { "id": "captain-memory", "name": "Captain memory", "nameAr": "ذاكرة الكابتن", "minTier": "max", "summary": "The Captain remembers your goals, body, preferences, and history — about 200 facts on Max, 500 on Pro." },
+    { "id": "captain-voice", "name": "Captain voice (TTS)", "nameAr": "صوت الكابتن", "minTier": "max", "summary": "Spoken replies via cloud premium voice with an on-device fallback. Consent-gated." },
+    { "id": "kitchen", "name": "Kitchen", "nameAr": "المطبخ", "minTier": "max", "summary": "Photograph your fridge and get a 3- or 7-day meal plan from your ingredients, with macros and a shopping list." },
+    { "id": "gym", "name": "Gym & workouts", "nameAr": "التمارين", "minTier": "max", "summary": "Captain-generated plans, a live session screen, Zone-2 hands-free voice coaching, and a post-workout summary." },
+    { "id": "sleep", "name": "Sleep (Smart Wake + analysis)", "nameAr": "النوم", "minTier": "max", "summary": "Sleep tracking, Smart Wake windows from 90-minute cycles, and on-device sleep analysis with a morning briefing." },
+    { "id": "battle", "name": "Battle / QuestKit Arena", "nameAr": "المعركة", "minTier": "max", "summary": "A competitive ladder of 10 stages x 5 challenges that unlock sequentially." },
+    { "id": "peaks-view", "name": "Peaks (view-only)", "nameAr": "قِمَم (عرض فقط)", "minTier": "max", "summary": "Browse the Legendary Challenges on Max; starting one requires Pro." },
+    { "id": "peaks", "name": "Peaks / Legendary Challenges (full)", "nameAr": "قِمَم", "minTier": "pro", "summary": "Real 4-16 week periodized record programs: Engine Test, a weekly-adapting AI plan, and a weekly review with the Captain." },
+    { "id": "my-vibe", "name": "My Vibe / DJ Hamoudi", "nameAr": "ماي فايب", "minTier": "pro", "summary": "Spotify-powered music that adapts to your biometric state and the time of day." },
+    { "id": "advanced-intelligence", "name": "Advanced intelligence", "nameAr": "الذكاء المتقدّم", "minTier": "pro", "summary": "The advanced AI model, extended memory, premium voice, weekly insight narratives, and multi-week plans." },
+    { "id": "photo-analysis", "name": "Photo / form analysis", "nameAr": "تحليل الصور", "minTier": "pro", "summary": "Analyze body or exercise-form photos for tailored guidance." },
+    { "id": "directives", "name": "Directives", "nameAr": "التوجيهات", "minTier": "pro", "summary": "Teach the Captain a standing rule once and he executes it automatically forever." },
+    { "id": "tribe", "name": "Tribe / Arena", "nameAr": "القبيلة", "minTier": "pro", "summary": "A small private social layer (max 5 members) with shared missions and sparks. Built but NOT yet live (feature-flagged off)." }
+  ]
+}

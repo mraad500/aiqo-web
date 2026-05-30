@@ -1,0 +1,25 @@
+{
+  "terms": [
+    { "term": "Bio-Digital OS", "definition": "AiQo's organizing philosophy: the body is the input (HealthKit), the AI is the interface (Captain), and the system adapts to the user's circadian rhythm across five bio-phases." },
+    { "term": "Captain Hamoudi", "termAr": "كابتن حمودي", "definition": "The AI coach at the center of AiQo. Speaks Iraqi/Gulf Arabic, remembers the user, and reasons over their health data." },
+    { "term": "Bio-phase", "definition": "One of five circadian phases (Awakening, Energy, Focus, Recovery, Zen) that shift the Captain's tone, timing, and advice through the day." },
+    { "term": "Tier", "definition": "Subscription level. Order: none(0) < max(1) < trial(2) < pro(3). Note: '.max' is the entry paid tier ($9.99), not the top; '.pro' ($19.99) is the top." },
+    { "term": "AiQo Max", "definition": "The entry paid tier, $9.99/mo. Full Captain, Kitchen, Gym, Sleep, Battle, Apple Watch." },
+    { "term": "AiQo Intelligence Pro", "definition": "The top tier, $19.99/mo. Adds the advanced model, extended memory, full Peaks, My Vibe, Directives, and photo analysis." },
+    { "term": "Trial", "termAr": "التجربة المجانية", "definition": "A 7-day, Pro-equivalent free trial. No charge during the trial; one per Apple ID." },
+    { "term": "Daily Aura", "definition": "The animated 24-hour activity ring on the Home screen." },
+    { "term": "Peaks / Legendary Challenges", "termAr": "قِمَم", "definition": "Real 4-16 week periodized record programs. Full access is Pro; Max is view-only." },
+    { "term": "Engine Test", "termAr": "قياس المحرك", "definition": "The heart-rate-reserve fitness assessment (via Apple Watch) that calibrates a Peaks plan." },
+    { "term": "Battle / QuestKit Arena", "definition": "A competitive ladder: 10 stages x 5 challenges x 3 difficulties; stages unlock sequentially. Max+." },
+    { "term": "Kitchen", "termAr": "المطبخ", "definition": "Fridge-camera to ingredient detection to an AI meal plan with macros and a shopping list. Max." },
+    { "term": "My Vibe / DJ Hamoudi", "definition": "Spotify-powered music that adapts to the user's biometric state and time of day. Pro." },
+    { "term": "Zone 2", "definition": "Hands-free voice coaching during cardio that keeps the user in the optimal heart-rate zone." },
+    { "term": "Smart Wake", "termAr": "الاستيقاظ الذكي", "definition": "Optimal wake-window recommendation from 90-minute sleep cycles, saved as a system alarm." },
+    { "term": "Memory", "termAr": "ذاكرة الكابتن", "definition": "The Captain's durable store of user facts. ~200 facts on Max, ~500 on Pro." },
+    { "term": "Directives", "definition": "User-taught standing rules the Captain executes automatically and forever. Pro." },
+    { "term": "PrivacySanitizer", "definition": "The layer that redacts PII (emails, phones, UUIDs, IPs) and normalizes names before any cloud call. Health metrics pass through exactly, not bucketed." },
+    { "term": "Hybrid Brain", "definition": "The two-layer AI: on-device (Apple Intelligence) for sleep/fallback/privacy work, and cloud (Gemini) for chat and plans." },
+    { "term": "Tribe / Arena", "termAr": "القبيلة", "definition": "A small private social layer (max 5 members). Built but not yet live (feature-flagged off)." },
+    { "term": "XP / Shield Tiers", "definition": "Experience points from actions; levels map to shield bands: Wood, Bronze, Silver, Gold, Platinum, Diamond, Obsidian, Legendary." }
+  ]
+}

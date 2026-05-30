@@ -1,0 +1,19 @@
+{
+  "name": "AiQo",
+  "tagline": "Not just an app — a new dimension for health.",
+  "taglineAr": "ليس تطبيقاً فقط، بل بُعدٌ جديد للصحة",
+  "category": "Bio-Digital Operating System",
+  "description": "AiQo is an Arabic-first, AI-native health companion for iOS, built around Captain Hamoudi — an AI coach who speaks the user's own Iraqi/Gulf Arabic dialect, remembers their journey, and reasons over their Apple Health data. The body is the input, the AI is the interface. It is not a calorie counter, a step tracker, a translated Western app, or a thin ChatGPT wrapper.",
+  "platforms": ["iOS", "watchOS"],
+  "primaryLanguage": "Arabic (Iraqi/Gulf dialect, RTL)",
+  "supportedLanguages": ["ar", "en"],
+  "website": "https://aiqo.app",
+  "appStoreUrl": "https://apps.apple.com/ae/app/aiqo/id6755132504",
+  "company": "AiQo — designed in the UAE",
+  "founder": "Mohammed Raad",
+  "social": { "instagram": "https://instagram.com/aiqoapp" },
+  "support": { "url": "https://aiqo.app/support", "email": "support@aiqo.app" },
+  "privacySummary": "On-device first (Apple Intelligence). PII is stripped before any cloud call; sleep analysis never leaves the device; health metrics are sent exactly, not bucketed. No ads, no data sales.",
+  "version": "1.0.6",
+  "lastUpdated": "2026-05-30"
+}

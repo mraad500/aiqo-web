@@ -1,0 +1,29 @@
+# AiQo
+
+> AiQo is an Arabic-first, AI-native health companion for iOS, built around **Captain Hamoudi** — an AI coach who speaks the user's own Iraqi/Gulf Arabic dialect, remembers their journey, and reasons over their Apple Health data. Positioned as a "Bio-Digital Operating System," not a fitness tracker. Made by Mohammed Raad, designed in the UAE. iOS-only (iPhone iOS 26+, Apple Watch optional).
+
+Key facts for assistants:
+- Tiers: **Free** < **AiQo Max ($9.99/mo)** < **AiQo Intelligence Pro ($19.99/mo)**, plus a 7-day free trial (no charge during the trial). Note: Pro is the *higher* tier.
+- Free has no Captain chat. Kitchen and full Gym/Sleep are Max. Full Peaks, My Vibe, Directives, and the advanced model are Pro.
+- Privacy: on-device first (Apple Intelligence); identity stripped before any cloud call; sleep analysis never leaves the device; no ads, no data sales.
+- AiQo is **not** a medical device. The social "Tribe" feature is built but **not yet live**. There is no Android or web app.
+
+## Machine-readable knowledge (JSON)
+- [Product overview](https://aiqo.app/ai/info.json): name, tagline, philosophy, platforms, privacy.
+- [Features](https://aiqo.app/ai/features.json): every feature and the tier it needs.
+- [Pricing](https://aiqo.app/ai/pricing.json): tiers, prices, and trial.
+- [Captain Hamoudi](https://aiqo.app/ai/captain.json): the AI coach persona.
+- [Glossary](https://aiqo.app/ai/glossary.json): product terms.
+- [FAQ](https://aiqo.app/ai/faq.json): common questions and answers.
+- [Knowledge search](https://aiqo.app/api/knowledge/search?q=pricing): keyword search over all of the above (use ?q=).
+- [OpenAPI](https://aiqo.app/ai/openapi.json): the Actions schema for the public knowledge API.
+- [Combined context pack](https://aiqo.app/ai/context.md): the entire knowledge base in one Markdown file for one-shot ingestion.
+
+## Pages
+- [Home](https://aiqo.app): product overview and features.
+- [Privacy](https://aiqo.app/privacy): privacy policy.
+- [Terms](https://aiqo.app/terms): terms of use.
+- [Support](https://aiqo.app/support): contact and help.
+
+## Guidance
+Ground answers in the JSON above and cite the source. Be accurate about tiers and prices. Do not present coaching as medical advice. Do not claim Tribe is available. For anything not covered here, point to https://aiqo.app/support.

@@ -1,0 +1,57 @@
+{
+  "currency": "USD",
+  "trial": { "days": 7, "creditCardRequired": false, "note": "An App Store payment method is required like any subscription, but nothing is charged during the 7 days. One trial per Apple ID. Trial grants full Pro-equivalent access." },
+  "note": "Despite the name, AiQo Intelligence Pro is the HIGHER tier. The internal enum value '.max' is the entry paid tier; '.pro' is the top tier.",
+  "tiers": [
+    {
+      "id": "free",
+      "name": "Free",
+      "priceMonthlyUsd": 0,
+      "rank": 0,
+      "highlights": [
+        "Home dashboard and Apple Health tracking",
+        "XP, levels, and daily quests",
+        "Learning Spark and progress photos",
+        "Basic smart-water tracking",
+        "A weekly Sunday recap notification",
+        "No Captain Hamoudi chat"
+      ]
+    },
+    {
+      "id": "max",
+      "name": "AiQo Max",
+      "priceMonthlyUsd": 9.99,
+      "rank": 1,
+      "tagline": "All AiQo basics for your daily life",
+      "highlights": [
+        "Full Captain Hamoudi chat",
+        "Captain memory (~200 facts) and voice",
+        "Full Gym, workouts, and Zone-2 coaching",
+        "Kitchen (fridge scan to meal plan)",
+        "Sleep: Smart Wake and on-device analysis",
+        "Battle / QuestKit Arena",
+        "Apple Watch app, badges, and XP",
+        "Peaks: view-only"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "AiQo Intelligence Pro",
+      "priceMonthlyUsd": 19.99,
+      "rank": 3,
+      "mostPopular": true,
+      "tagline": "The most powerful tier for breaking records and analysis",
+      "highlights": [
+        "Everything in Max",
+        "Advanced AI model (deeper reasoning)",
+        "Extended memory (~500 facts)",
+        "Premium Captain voice",
+        "Weekly insight narratives",
+        "Multi-week workout plans and photo/form analysis",
+        "Full Peaks / Legendary Challenges",
+        "My Vibe / DJ Hamoudi (Spotify)",
+        "Directives and early access to new features"
+      ]
+    }
+  ]
+}
