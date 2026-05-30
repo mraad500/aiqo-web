@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "AiQo — بُعدٌ جديد للصحة",
   description:
-    "كابتن حمودي يقرأ يومك، يتذكّر رحلتك، ويكون معك في كل خطوة — بلهجتك. تطبيق صحي عربي أولاً، مُصمَّم في الإمارات.",
+    "AiQo تطبيق صحي عربي أولاً من تطوير محمد رعد (عراقي 🇮🇶، يبني من الإمارات 🇦🇪)، محوره كابتن حمودي — مدرّب ذكاء اصطناعي يحجي بلهجتك ويتذكّر رحلتك. أبرز ميزاته: شرارة التعلم، My Vibe، تحليل النوم، المطبخ، قِمَم، ومعركة.",
   metadataBase: new URL("https://aiqo.app"),
   alternates: { canonical: "/" },
   openGraph: {
@@ -68,6 +68,12 @@ const jsonLd = [
     url: "https://aiqo.app",
     logo: "https://aiqo.app/brand/icon/512.png",
     sameAs: ["https://instagram.com/aiqoapp"],
+    founder: {
+      "@type": "Person",
+      name: "Mohammed Raad",
+      jobTitle: "Founder & CEO",
+      nationality: "Iraqi",
+    },
   },
   {
     "@context": "https://schema.org",
@@ -77,6 +83,13 @@ const jsonLd = [
       "تطبيق صحي عربي أولاً مبني حول كابتن حمودي — مدرّب ذكاء اصطناعي يحجي بلهجتك، يتذكّر رحلتك، ويقرأ بياناتك الصحية. AiQo is an Arabic-first, AI-native health companion built around Captain Hamoudi.",
     operatingSystem: "iOS",
     applicationCategory: "HealthApplication",
+    author: {
+      "@type": "Person",
+      name: "Mohammed Raad",
+      nationality: "Iraqi",
+      jobTitle: "Founder & CEO of AiQo",
+    },
+    creator: { "@type": "Person", name: "Mohammed Raad" },
     inLanguage: ["ar", "en"],
     url: "https://aiqo.app",
     downloadUrl: "https://apps.apple.com/ae/app/aiqo/id6755132504",

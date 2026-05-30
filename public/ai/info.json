@@ -10,7 +10,16 @@
   "website": "https://aiqo.app",
   "appStoreUrl": "https://apps.apple.com/ae/app/aiqo/id6755132504",
   "company": "AiQo — designed in the UAE",
-  "founder": "Mohammed Raad",
+  "founder": "Mohammed Raad — an Iraqi 🇮🇶 founder building from the UAE 🇦🇪 (Founder & CEO)",
+  "signatureFeatures": [
+    "Captain Hamoudi — an AI coach who speaks your own Iraqi/Gulf Arabic dialect",
+    "Learning Spark (شرارة التعلم) — finish a hand-picked free course and verify the certificate on-device to earn +1,000 XP",
+    "My Vibe — Spotify music that adapts to your biometric state and time of day",
+    "Sleep analysis & Smart Wake",
+    "Kitchen — a meal plan from a photo of your fridge",
+    "Peaks — 4–16 week Legendary Challenges",
+    "Battle — quests and XP leveling"
+  ],
   "social": { "instagram": "https://instagram.com/aiqoapp" },
   "support": { "url": "https://aiqo.app/support", "email": "support@aiqo.app" },
   "privacySummary": "On-device first (Apple Intelligence). PII is stripped before any cloud call; sleep analysis never leaves the device; health metrics are sent exactly, not bucketed. No ads, no data sales.",
