@@ -36,6 +36,12 @@ const SCREENS = [
   { slug: "my-vibe",      src: "my vibe .jpg" },
   { slug: "watch-hero",   src: "You are not someone who starts from scratch.png" },
   { slug: "profile",      src: "Profile.png" },
+  // Learning Spark (شرارة التعلم) — the first quest in Battle (معركة).
+  { slug: "ls-battle",    src: "ls-battle.jpg" },
+  { slug: "ls-challenge", src: "ls-challenge.jpg" },
+  { slug: "ls-courses",   src: "ls-courses.jpg" },
+  { slug: "ls-select",    src: "ls-select.jpg" },
+  { slug: "ls-proof",     src: "ls-proof.jpg" },
 ];
 
 const CAPTAIN_SRC = "Captain Hamoudi's picture.PNG";

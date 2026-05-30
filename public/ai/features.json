@@ -4,7 +4,7 @@
     { "id": "health-tracking", "name": "Apple Health tracking", "nameAr": "تتبّع الصحة", "minTier": "free", "summary": "Continuous read of HealthKit (steps, heart rate, HRV, energy, sleep, VO2max, workouts) with optional write-back." },
     { "id": "xp-leveling", "name": "XP & Leveling", "nameAr": "النقاط والمستويات", "minTier": "free", "summary": "Earn XP for actions; progress through shield tiers from Wood to Legendary." },
     { "id": "quests", "name": "Daily Quests", "nameAr": "التحديات اليومية", "minTier": "free", "summary": "Small daily and weekly tasks that award XP and keep you moving." },
-    { "id": "learning-spark", "name": "Learning Spark", "nameAr": "شرارة التعلّم", "minTier": "free", "summary": "Complete an online course and verify the certificate on-device for a large XP reward." },
+    { "id": "learning-spark", "name": "Learning Spark", "nameAr": "شرارة التعلّم", "minTier": "free", "summary": "A free starter quest in Battle (Stage 1): finish a hand-picked free course (Edraak in Arabic or Coursera in English), then verify the certificate on-device to earn +1,000 XP. The certificate never leaves your phone." },
     { "id": "outdoor-run", "name": "Outdoor Run (GPS)", "nameAr": "الجري", "minTier": "free", "summary": "GPS running with a 3D map, chase camera, live stats, and interactive route replay." },
     { "id": "smart-water", "name": "Smart Water Tracking", "nameAr": "تتبّع الماء", "minTier": "free", "summary": "Hydration goals and reminders that adapt to activity, climate, and time of day." },
     { "id": "progress-photos", "name": "Progress Photos", "nameAr": "صور التقدّم", "minTier": "free", "summary": "Before/after body-transformation tracking with weight, notes, and side-by-side compare." },

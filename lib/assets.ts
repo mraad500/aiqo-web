@@ -62,6 +62,12 @@ export const SCREENS = {
   workout: standardScreen("workout", "شاشة التمرين في AiQo"),
   myVibe: standardScreen("my-vibe", "My Vibe — موسيقى تتكيف مع نبضك"),
   profile: standardScreen("profile", "الملف الشخصي في AiQo"),
+  // Learning Spark (شرارة التعلم) — first quest in Battle (معركة).
+  lsBattle: standardScreen("ls-battle", "شرارة التعلم داخل تبويب معركة"),
+  lsChallenge: standardScreen("ls-challenge", "تفاصيل تحدي شرارة التعلم"),
+  lsCourses: standardScreen("ls-courses", "خيارات الكورسات المجانية المختارة"),
+  lsSelect: standardScreen("ls-select", "اختيار الكورس وإثبات التقدّم"),
+  lsProof: standardScreen("ls-proof", "إثبات إكمال الكورس عبر الشهادة"),
   // Low-res source (591×1280). No 860w/1290w variants — render ≤ 400px wide.
   watchHero: {
     alt: "AiQo على Apple Watch",

@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const NAV_LINKS = [
   { label: "الكابتن", href: "#captain", id: "captain" },
   { label: "التطبيق", href: "#showcase", id: "showcase" },
+  { label: "شرارة التعلم", href: "#learning-spark", id: "learning-spark" },
   { label: "الساعة", href: "#watch", id: "watch" },
   { label: "الأسعار", href: "#pricing", id: "pricing" },
   { label: "الأسئلة", href: "#faq", id: "faq" },

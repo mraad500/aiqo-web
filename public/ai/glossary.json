@@ -11,6 +11,7 @@
     { "term": "Peaks / Legendary Challenges", "termAr": "قِمَم", "definition": "Real 4-16 week periodized record programs. Full access is Pro; Max is view-only." },
     { "term": "Engine Test", "termAr": "قياس المحرك", "definition": "The heart-rate-reserve fitness assessment (via Apple Watch) that calibrates a Peaks plan." },
     { "term": "Battle / QuestKit Arena", "definition": "A competitive ladder: 10 stages x 5 challenges x 3 difficulties; stages unlock sequentially. Max+." },
+    { "term": "Learning Spark", "termAr": "شرارة التعلّم", "definition": "A one-time starter quest (the first challenge in Battle Stage 1, Awakening): complete a hand-picked free course (Edraak in Arabic or Coursera in English) and verify the certificate on-device for a +1,000 XP reward. Free; the certificate never leaves the phone." },
     { "term": "Kitchen", "termAr": "المطبخ", "definition": "Fridge-camera to ingredient detection to an AI meal plan with macros and a shopping list. Max." },
     { "term": "My Vibe / DJ Hamoudi", "definition": "Spotify-powered music that adapts to the user's biometric state and time of day. Pro." },
     { "term": "Zone 2", "definition": "Hands-free voice coaching during cardio that keeps the user in the optimal heart-rate zone." },

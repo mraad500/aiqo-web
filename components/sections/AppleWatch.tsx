@@ -47,9 +47,9 @@ export function AppleWatch() {
         >
           <div className="inline-flex items-center gap-3 mb-5">
             <span className="font-mono text-[11px] font-medium tabular-nums tracking-[0.12em] text-white/60">
-              <span className="text-white">03</span>
+              <span className="text-white">04</span>
               <span className="inline-block w-4 h-px bg-[color:var(--color-mint-vibrant)] mx-1.5 translate-y-[-3px]" />
-              <span>06</span>
+              <span>07</span>
             </span>
             <span
               className="text-[13px] font-semibold"

@@ -93,9 +93,9 @@ export function FAQ() {
         >
           <div className="inline-flex items-center gap-3 mb-4">
             <span className="font-mono text-[11px] font-medium text-ink-soft tabular-nums tracking-[0.12em]">
-              <span className="text-ink">06</span>
+              <span className="text-ink">07</span>
               <span className="inline-block w-4 h-px bg-[color:var(--color-mint-vibrant)] mx-1.5 translate-y-[-3px]" />
-              <span>06</span>
+              <span>07</span>
             </span>
             <span className="eyebrow !mb-0">الأسئلة الشائعة</span>
           </div>
