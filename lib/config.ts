@@ -6,7 +6,7 @@
 
 export const siteConfig = {
   appStore: {
-    approved: false,
-    url: "",
+    approved: true,
+    url: "https://apps.apple.com/ae/app/aiqo/id6755132504",
   },
 };
