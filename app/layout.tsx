@@ -84,6 +84,18 @@ const jsonLd = [
       { "@type": "Offer", price: "9.99", priceCurrency: "USD", name: "AiQo Max" },
       { "@type": "Offer", price: "19.99", priceCurrency: "USD", name: "AiQo Intelligence Pro" },
     ],
+    featureList: [
+      "كابتن حمودي: مدرّب صحي بالذكاء الاصطناعي يحجي بلهجتك ويتذكّر رحلتك — Captain Hamoudi, an AI health coach who speaks your dialect",
+      "شرارة التعلم: أكمل كورساً مجانياً مختاراً (إدراك أو Coursera) وتحقّق من شهادتك على الجهاز لتكسب +1000 نقطة — Learning Spark, with on-device certificate verification",
+      "My Vibe (DJ Hamoudi): موسيقى من Spotify تتكيّف مع حالتك الحيوية ووقت يومك — adaptive music for your biometric state",
+      "تحليل النوم والاستيقاظ الذكي على الجهاز — Sleep analysis & Smart Wake",
+      "المطبخ: خطة وجبات من صورة ثلاجتك — Kitchen, meal plans from a fridge photo",
+      "قِمَم: تحديات أسطورية مُبرمَجة من 4 إلى 16 أسبوعاً — Peaks / Legendary Challenges",
+      "معركة: تحديات وتقدّم بنقاط الخبرة — Battle quests & XP leveling",
+      "تمارين مع تدريب صوتي في منطقة النبض الثانية — Workouts with Zone-2 voice coaching",
+      "تكامل Apple Health و Apple Watch — Apple Health & Apple Watch integration",
+      "خصوصية أولاً: معالجة على الجهاز وتجريد الهوية قبل أي طلب سحابي — privacy-first, on-device processing",
+    ],
   },
   {
     "@context": "https://schema.org",
