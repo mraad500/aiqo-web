@@ -4,6 +4,7 @@ import { Captain } from "@/components/sections/Captain";
 import { Showcase } from "@/components/sections/Showcase";
 import { LearningSpark } from "@/components/sections/LearningSpark";
 import { OutdoorRun } from "@/components/sections/OutdoorRun";
+import { BentoGrid } from "@/components/sections/BentoGrid";
 import { AppleWatch } from "@/components/sections/AppleWatch";
 import { StatsStrip } from "@/components/sections/StatsStrip";
 import { Privacy } from "@/components/sections/Privacy";
@@ -22,6 +23,7 @@ export default function Home() {
         <Showcase />
         <LearningSpark />
         <OutdoorRun />
+        <BentoGrid />
         <AppleWatch />
         <StatsStrip />
         <Privacy />
