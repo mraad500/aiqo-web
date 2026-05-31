@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Apple, Menu, X } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { MagneticButton } from "@/components/MagneticButton";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
@@ -104,6 +105,7 @@ export function Navigation() {
         </div>
 
         <div className="hidden md:flex items-center gap-2 shrink-0">
+          <ThemeToggle />
           <button
             className="text-[12px] font-semibold text-ink-soft hover:text-ink border border-[color:var(--stroke)] rounded-full px-3 py-1 h-7 transition-colors"
             aria-label="اللغة"
@@ -113,7 +115,7 @@ export function Navigation() {
           {approved && url ? (
             <MagneticButton
               href={url}
-              className="btn-shine inline-flex items-center gap-1.5 bg-[color:var(--color-mint-vibrant)] text-ink rounded-full px-4 py-2 text-[13px] font-bold hover:bg-[color:var(--color-mint-deep)] hover:text-white transition-colors"
+              className="btn-shine inline-flex items-center gap-1.5 bg-[color:var(--color-mint-vibrant)] text-[#0a0c0b] rounded-full px-4 py-2 text-[13px] font-bold hover:bg-[color:var(--color-mint-deep)] hover:text-white transition-colors"
               aria-label="حمّل التطبيق"
             >
               <Apple className="w-3.5 h-3.5" />
@@ -152,12 +154,16 @@ export function Navigation() {
                   {link.label}
                 </a>
               ))}
+              <div className="flex items-center justify-between py-3 px-2">
+                <span className="text-[15px] font-medium text-ink">الوضع الليلي</span>
+                <ThemeToggle />
+              </div>
               {approved && url ? (
                 <>
                   <div className="h-px bg-[color:var(--stroke)] my-2" />
                   <a
                     href={url}
-                    className="inline-flex items-center justify-center gap-2 bg-[color:var(--color-mint-vibrant)] text-ink rounded-full px-5 py-3 text-[14px] font-bold"
+                    className="inline-flex items-center justify-center gap-2 bg-[color:var(--color-mint-vibrant)] text-[#0a0c0b] rounded-full px-5 py-3 text-[14px] font-bold"
                   >
                     <Apple className="w-4 h-4" />
                     حمّل التطبيق

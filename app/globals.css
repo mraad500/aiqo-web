@@ -491,3 +491,73 @@ html.intro-done #brand-intro {
 @media (prefers-reduced-motion: reduce) {
   #brand-intro { display: none; }
 }
+
+/* ════════════════════════════════════════════════════════════════════════
+   DARK MODE — cinematic. Scoped entirely under .dark so light mode is
+   untouched. @theme colors are inlined into utilities, so the literal
+   utilities (text-ink, bg-bg, bg-white/XX, bg-ink) get explicit overrides;
+   var-referenced props (--stroke, --glass-stroke, shadows, arbitrary
+   [color:var(--…)]) flip via the variable overrides below.
+   ════════════════════════════════════════════════════════════════════════ */
+.dark {
+  --color-bg: #0a0c0b;
+  --color-bg-elev: #14181a;
+  /* NOTE: --color-ink* are intentionally NOT overridden — they stay dark so
+     inline `var(--color-ink)` text on light sand/mint chips remains readable.
+     Page text flips via the scoped `.text-ink` rules below instead. */
+
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-stroke: rgba(255, 255, 255, 0.12);
+  --stroke: rgba(255, 255, 255, 0.1);
+
+  --background: #0a0c0b;
+  --foreground: #eceee9;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #eceee9;
+  --border: rgba(255, 255, 255, 0.1);
+  --muted: #1a1f1d;
+  --muted-foreground: #9ca29e;
+
+  --shadow-aiqo: 0 1px 2px rgba(0, 0, 0, 0.5), 0 8px 28px rgba(0, 0, 0, 0.55);
+  --shadow-lift: 0 2px 6px rgba(0, 0, 0, 0.5), 0 24px 56px rgba(0, 0, 0, 0.65);
+  --shadow-soft: 0 10px 44px -12px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 6px 28px -8px rgba(0, 0, 0, 0.6);
+}
+
+/* Base surfaces / text (inlined utilities → explicit) */
+.dark body { background-color: #0a0c0b; color: #eceee9; }
+.dark .bg-bg { background-color: #0a0c0b !important; }
+.dark .bg-bg-elev { background-color: #14181a !important; }
+/* Flip page text to light — but NOT on chips/badges/buttons that sit on a
+   fixed light sand/mint brand background (those keep their dark ink). */
+.dark .text-ink:not([style*="--color-sand"]):not([style*="--color-mint-vibrant"]):not([class*="--color-sand"]):not([class*="--color-mint-vibrant"]) {
+  color: #eceee9 !important;
+}
+.dark .text-ink-soft { color: #9ca29e !important; }
+.dark .text-ink-faint { color: #6f756f !important; }
+
+/* Glass surfaces */
+.dark .bg-white\/55,
+.dark .bg-white\/60,
+.dark .bg-white\/70 { background-color: rgba(255, 255, 255, 0.055) !important; }
+.dark .bg-white\/40 { background-color: rgba(255, 255, 255, 0.04) !important; }
+.dark .bg-white\/80 { background-color: rgba(14, 17, 19, 0.82) !important; }
+.dark .bg-white\/95 { background-color: rgba(12, 15, 16, 0.96) !important; }
+
+/* Primary ink button → light pill with dark text in dark mode */
+.dark .bg-ink { background-color: #eceee9 !important; color: #0a0c0b !important; }
+.dark .bg-ink * { color: #0a0c0b !important; }
+
+/* Grain reads inverted on dark */
+.dark .grain { mix-blend-mode: screen; opacity: 0.05; }
+
+/* Dark-tinted brand intro */
+.dark #brand-intro {
+  background: radial-gradient(120% 120% at 50% 32%, #14181a 0%, #0a0c0b 55%, #06100d 100%);
+}
+.dark .intro-word { color: #eceee9; }
+
+/* Theme toggle icon crossfade */
+.theme-toggle .moon { display: none; }
+.dark .theme-toggle .sun { display: none; }
+.dark .theme-toggle .moon { display: inline; }

@@ -179,6 +179,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Apply saved theme BEFORE paint (default light; opt-in dark) — no flash. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{if(localStorage.getItem('aiqo-theme')==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();",
+          }}
+        />
         {/* Decide the brand intro BEFORE paint: skip for returning visitors
             (once per session) and for reduced-motion — no flash, no hydration. */}
         <script
