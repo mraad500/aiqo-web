@@ -71,7 +71,7 @@ export function StatsStrip() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.8, delay: i * 0.08, ease: EASE }}
-              className="bg-white/60 backdrop-blur-xl border border-[color:var(--glass-stroke)] rounded-[28px] p-8 text-center shadow-[var(--shadow-aiqo)]"
+              className="bg-white/60 backdrop-blur-xl border border-[color:var(--glass-stroke)] rounded-[28px] p-8 text-center shadow-[var(--shadow-aiqo)] hover:shadow-[var(--shadow-lift)] hover:-translate-y-1.5 transition-all duration-500"
             >
               <p
                 className="font-display font-bold text-ink tabular-nums"

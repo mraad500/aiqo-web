@@ -12,6 +12,7 @@ export function FinalCTA() {
 
   return (
     <section id="download" className="relative py-28 md:py-40 overflow-hidden">
+      <div className="aurora opacity-70" aria-hidden />
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden>
         <div
           className="w-[800px] h-[800px] rounded-full blur-[200px] opacity-40"
@@ -28,7 +29,17 @@ export function FinalCTA() {
           className="font-display font-bold text-ink"
           style={{ fontSize: "clamp(36px, 5.5vw, 72px)", lineHeight: 1.02, letterSpacing: "-0.015em" }}
         >
-          جاهز تتعرّف على كابتن حمودي؟
+          جاهز تتعرّف على{" "}
+          <span
+            className="bg-clip-text text-transparent"
+            style={{
+              backgroundImage:
+                "linear-gradient(105deg, var(--color-mint-deep) 0%, var(--color-mint-vibrant) 50%, var(--color-sand-deep) 100%)",
+            }}
+          >
+            كابتن حمودي
+          </span>
+          ؟
         </motion.h2>
 
         <motion.p
