@@ -10,6 +10,7 @@ import { StatsStrip } from "@/components/sections/StatsStrip";
 import { Privacy } from "@/components/sections/Privacy";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
+import { Story } from "@/components/sections/Story";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 
@@ -29,6 +30,7 @@ export default function Home() {
         <Privacy />
         <Pricing />
         <FAQ />
+        <Story />
         <FinalCTA />
       </main>
       <Footer />
