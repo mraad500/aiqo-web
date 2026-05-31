@@ -179,8 +179,34 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Decide the brand intro BEFORE paint: skip for returning visitors
+            (once per session) and for reduced-motion — no flash, no hydration. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var s=sessionStorage.getItem('aiqo-intro');var r=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(s||r){document.documentElement.classList.add('intro-done');}else{sessionStorage.setItem('aiqo-intro','1');}}catch(e){document.documentElement.classList.add('intro-done');}})();",
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col relative">
+        {/* Brand intro reveal — pure CSS, auto-dismisses; hidden instantly via
+            .intro-done when it shouldn't play. */}
+        <div id="brand-intro" aria-hidden="true">
+          <div className="intro-inner">
+            <img
+              src="/brand/icon/192.png"
+              alt=""
+              width={78}
+              height={78}
+              className="intro-logo-img"
+              draggable={false}
+            />
+            <div className="intro-word">AiQo</div>
+            <div className="intro-line" />
+            <div className="intro-tag">بُعدٌ جديد للصحة</div>
+          </div>
+        </div>
+
         <a href="#main" className="skip-link">
           تخطَّ إلى المحتوى
         </a>
