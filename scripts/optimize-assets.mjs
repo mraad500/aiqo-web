@@ -32,7 +32,7 @@ const SCREENS = [
   { slug: "peaks-plan",   src: "(Peaks) feature for breaking records3.PNG" },
   { slug: "peaks-review", src: "(Peaks) feature for breaking records5.PNG" },
   { slug: "daily-quest",  src: "(Battle) Challenge Feature1.PNG" },
-  { slug: "workout",      src: "Exercises.jpg" },
+  { slug: "workout",      src: "workout.png" },
   { slug: "my-vibe",      src: "my vibe .jpg" },
   { slug: "watch-hero",   src: "You are not someone who starts from scratch.png" },
   { slug: "profile",      src: "Profile.png" },
@@ -42,6 +42,10 @@ const SCREENS = [
   { slug: "ls-courses",   src: "ls-courses.jpg" },
   { slug: "ls-select",    src: "ls-select.jpg" },
   { slug: "ls-proof",     src: "ls-proof.jpg" },
+  // Outdoor Run (الجري بالخارج) — GPS run session start → active → summary.
+  { slug: "run-start",    src: "run-start.jpg" },
+  { slug: "run-active",   src: "run-active.jpg" },
+  { slug: "run-summary",  src: "run-summary.jpg" },
 ];
 
 const CAPTAIN_SRC = "Captain Hamoudi's picture.PNG";

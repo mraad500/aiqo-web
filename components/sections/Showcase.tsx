@@ -166,7 +166,7 @@ export function Showcase() {
             <span className="font-mono text-[11px] font-medium text-ink-soft tabular-nums tracking-[0.12em]">
               <span className="text-ink">02</span>
               <span className="inline-block w-4 h-px bg-[color:var(--color-mint-vibrant)] mx-1.5 translate-y-[-3px]" />
-              <span>07</span>
+              <span>08</span>
             </span>
             <span className="eyebrow !mb-0">التطبيق</span>
           </div>

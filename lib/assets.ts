@@ -68,6 +68,10 @@ export const SCREENS = {
   lsCourses: standardScreen("ls-courses", "خيارات الكورسات المجانية المختارة"),
   lsSelect: standardScreen("ls-select", "اختيار الكورس وإثبات التقدّم"),
   lsProof: standardScreen("ls-proof", "إثبات إكمال الكورس عبر الشهادة"),
+  // Outdoor Run (الجري بالخارج) — GPS session start → active → summary.
+  runStart: standardScreen("run-start", "بدء جلسة الجري بالخارج على خريطة ثلاثية الأبعاد"),
+  runActive: standardScreen("run-active", "تتبّع حيّ أثناء الجري — مسافة، نبض، وسرعة"),
+  runSummary: standardScreen("run-summary", "ملخص جلسة الجري بالخارج مع المسار الكامل"),
   // Low-res source (591×1280). No 860w/1290w variants — render ≤ 400px wide.
   watchHero: {
     alt: "AiQo على Apple Watch",

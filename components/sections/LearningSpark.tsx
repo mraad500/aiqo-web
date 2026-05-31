@@ -127,7 +127,7 @@ export function LearningSpark() {
             className="order-2 lg:order-1"
           >
             <div className="flex items-center gap-3 mb-4">
-              <NumberBadge n={3} total={7} />
+              <NumberBadge n={3} total={8} />
               <span className="eyebrow !mb-0">شرارة التعلم</span>
             </div>
 

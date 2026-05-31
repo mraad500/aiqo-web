@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Captain } from "@/components/sections/Captain";
 import { Showcase } from "@/components/sections/Showcase";
 import { LearningSpark } from "@/components/sections/LearningSpark";
+import { OutdoorRun } from "@/components/sections/OutdoorRun";
 import { AppleWatch } from "@/components/sections/AppleWatch";
 import { StatsStrip } from "@/components/sections/StatsStrip";
 import { Privacy } from "@/components/sections/Privacy";
@@ -20,6 +21,7 @@ export default function Home() {
         <Captain />
         <Showcase />
         <LearningSpark />
+        <OutdoorRun />
         <AppleWatch />
         <StatsStrip />
         <Privacy />
